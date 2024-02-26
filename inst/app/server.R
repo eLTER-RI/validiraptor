@@ -63,7 +63,7 @@ server = function(input, output, session){
     output$verdict <- renderText(ifelse(is_valid(), 'a valid', 'not a valid'))
 
     adviseSeparator <- function(d){
-        if(ncol(d) < 2 & length(unlist(strsplit(d[1, 1], ','))) > 1){
+        if(!is.null(d) & ncol(d) < 2 & length(unlist(strsplit(as.character(d[1, 1]), ','))) > 1){
             show('alertWrongSeparator')} else {hide('alertWrongSeparator')}
     }
 
