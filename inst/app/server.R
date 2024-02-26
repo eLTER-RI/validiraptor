@@ -102,7 +102,6 @@ server = function(input, output, session){
 
     ## digest content of textarea upon pasting of CSV data:
     observe({
-        cat("pasted!")
         req(input$dataPaster)
         read.csv2(text = input$dataPaster, header = TRUE, sep = sep(), dec = '.') |>
             head(1) |>

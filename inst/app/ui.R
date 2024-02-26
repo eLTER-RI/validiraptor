@@ -120,28 +120,8 @@ jsoneditOutput('schemaView')
 )
 )
 ),
-tabPanel(id = 'tabAbout', title = 'about'),
-tabPanel(id = 'tabHelp', title = 'help',
-         markdown('
-
-
-
-# for schema maintainers
-To learn more about the architecture, including where schemas are stored:
-1. install the app:
-```
-library(remotes)
-install_github("eLTER-RI/validiraptor)
-```
-2. launch the documentation:
-```
-run_site()
-```
-'
-)
-
-
-)
+tabPanel(id = 'tabAbout', title = 'about', includeMarkdown('www/about.md')),
+tabPanel(id = 'tabHelp', title = 'help', includeMarkdown('www/help.md'))
 )
 
 
