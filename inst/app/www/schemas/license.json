@@ -1,0 +1,11 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://velociraptor.example/license",
+    "title" : "eLTER license schema",
+    "description" : "specification of eLTER license reports",
+    "type" : "object",
+    "properties" : {
+        "LICENSE" : {"$ref": "shared#/definitions/NOTES"}
+    },
+    "required" : ["LICENSE"]
+}

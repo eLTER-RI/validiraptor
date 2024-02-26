@@ -1,0 +1,30 @@
+.small > pre{font-size:.8em}
+
+pre{background-color: #ffffff;}
+
+## taken from Nan Xiao, needed for d'n'd file picker
+## https://nanx.me/blog/post/shiny-file-input-area/
+
+.btn-area {
+  color: #495057;
+  border-color: #495057;
+  border-style: dashed;
+  border-width: 2px;
+  border-radius: 20px;
+  background-color: transparent;
+}
+
+.btn-area:hover {
+  color: #6c757d;
+}
+
+.progress {
+  height: 32px;
+}
+
+.progress .progress-bar {
+  font-size: 16px;
+  line-height: 28px;
+}
+
+

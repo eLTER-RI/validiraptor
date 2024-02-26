@@ -1,0 +1,21 @@
+{
+    "$id": "https://velociraptor.example/data_observation",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+	"SITE_CODE": {"$ref": "shared#/definitions/SITE_CODE"},
+	"STATION_CODE": {"$ref": "shared#/definitions/STATION_CODE"},
+	"ABS_POSITION": {"$ref": "shared#/definitions/ABS_POSITION"},
+	"VERT_OFFSET": {"$ref": "shared#/definitions/VERT_OFFSET"},
+	"HORI_OFFSET": {"$ref": "shared#/definitions/HORI_OFFSET"},
+	"VARIABLE": {"$ref": "shared#/definitions/VARIABLE"},
+	"TIME": {"$ref": "shared#/definitions/DATETIME"},
+	"VALUE": {"$ref": "shared#/definitions/VALUE"},
+	"FLAGQUA": {"$ref": "shared#/definitions/FLAGQUA"},
+	"FLAGSTA": {"$ref": "shared#/definitions/FLAGSTA"},
+	"EVENT_ID": {"$ref": "shared#/definitions/EVENT_ID"},
+	"SAMPLE_ID": {"$ref": "shared#/definitions/SAMPLE_ID"}
+    },
+    "required" : ["SITE_CODE", "VARIABLE", "TIME", "VALUE"]
+}
+

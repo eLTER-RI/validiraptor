@@ -1,0 +1,24 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://velociraptor.example/data_mapping",
+    "title" : "eLTER Station",
+    "description" : "validate eLTER data reports",
+    "type" : "object",
+    "properties" : {
+	"SITE_CODE" : {"$ref": "shared#/definitions/SITE_CODE"},
+        "STATION_CODE" : {"$ref": "shared#/definitions/STATION_CODE"},
+        "ABS_POSITION" : {"$ref": "shared#/definitions/ABS_POSITION"},
+        "VERT_OFFSET" : {"$ref": "shared#/definitions/VERT_OFFSET"},
+        "HORI_OFFSET" : {"$ref": "shared#/definitions/HORI_OFFSET"},
+        "LAYER" : {"$ref": "shared#/definitions/LAYER"},
+        "VARIABLE" : {"$ref": "shared#/definitions/VARIABLE"},
+        "TAXA" : {"$ref": "shared#/definitions/TAXA"},
+        "TIME" : {"$ref": "shared#/definitions/DATETIME"},
+        "VALUE" : {"$ref": "shared#/definitions/VALUE"},
+        "UNIT" : {"$ref": "shared#/definitions/UNIT"},
+	"FLAGQUA": {"$ref": "shared#/definitions/FLAGQUA"},
+	"EVENT_ID": {"$ref": "shared#/definitions/EVENT_ID"},
+	"SAMPLE_ID": {"$ref": "shared#/definitions/SAMPLE_ID"}
+    },
+    "required" : ["SITE_CODE", "TIME", "VARIABLE", "TAXA", "VALUE"]
+}

@@ -1,0 +1,18 @@
+---
+title: "Client-server tasksharing"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Client-server tasksharing}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+# Client-server task sharing
+ Somewhat untypically, the server does mostly housekeeping (UI generation, file operations and translating from/to JSON), while the actual validation is done in the client's browser using the [ajv](https://ajv.js.org/) library.
+
+<figure>
+<object data="task-sharing.svg"> </object>
+<figcaption>work sharing between client and server</figcaption>
+</figure>
+

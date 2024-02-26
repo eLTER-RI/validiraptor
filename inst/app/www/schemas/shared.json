@@ -1,0 +1,185 @@
+{
+    "$id": "https://velociraptor.example/shared",
+    "definitions": {
+	"ABS_POSITION": {
+	    "description": "Absolute 3D coordinates [decimal number] expressed in decimal degree [dec °] WGS84 using at least 6-digits after the decimal separator of a single observation within the site or station. When a specific location is available in the dataset record (e.g. if the STATION is an area and many observations/records are available within that area, the absolute position is that of the single record).\nCondition 1: if a ABSOLUTE_POSITION is provided the STATION normally is left empty.\nCondition 2: if an ABSOLUTE POSITION is provided the HORIZONTAL OFFSET is left blank.",
+	    "type": "string",
+	    "$comment": "in regular expression, make sure to escape with double backshlash!",
+	    "pattern": "/^([0-9]+(\\.[0-9])?[, ]+){2}([0-9](\\.[0-9]+)?)+$"
+	},
+	"ALTITUDE": {
+	    "type": "number"
+	},
+	"BBOXCORNER": {
+	    "description": "bounding box [decimal number] for a station in decimal degree [dec °] WGS84; if a point is represented east and west bounding coordinates are equal",
+	    "type": "number"
+	},
+	"CODE": {
+	    "description": "Code of the entry [UTF-8 character encoding] defined as abbreviation of the term, e.g. parameter name\rExample: FAG SYLV",
+	    "type": "string"
+	},
+	"CODE_URL": {
+	    "description": "Reference to the URL or persistent identifier\rExample:http://www.catalogueoflife.org/ col/details/species/id/ 1f4cac67d34e7473fb5092f2fa66f4d2",
+	    "type": "string"
+	},
+	"Country": {
+	    "description": "Country - country code: ISO 3166-1 alpha-2 (https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2), e.g. AT for Austria",
+	    "type": "string",
+	    "minLength": 2,
+	    "maxLength": 2
+	},
+	"DATETIME": {
+	    "description": "",
+	    "anyOf": [
+		{"type": "string", "format": "date-time" },
+		{"type": "string", "format": "date" },
+		{"type": "string", "pattern": "[0-9]{4}(-[0-1]{1}[0-9]{1})?$" },
+		{"type": "number", "multipleOf": 1 }
+	    ]
+	},
+	"DEFINITION": {
+	    "description": "Definition [UTF-8 character encoding] of the term used, in order to allow the user to understand the data.",
+	    "type": "string"
+	},
+	"EVENT_EFFORT": {
+	    "description": "A numeric value [number] for a measurement of the effort taken (time duration, length, area, or volume) in a sampling event.\\rExample: 25",
+	    "type": "string"
+	},
+	"EVENT_ID": {
+	    "description": "Reference to the Sampling event [UTF-8 character encoding] as defined in EVENT\rCondition: only used, if a sampling event is defined",
+	    "type": "string"
+	},
+	"FIELD_NAME": {
+	    "description": "Name of the field [UTF-8 character encoding] in the data reporting documents as reference\rExample: TAXA",
+	    "type": "string"
+	},
+	"FLAGQUA": {
+	    "type": "string",
+	    "description": "Quality flag for the data values based on the applied data quality control procedure as provided by the local system.\rExamples: Q = quality controlled value, LOD = below limit of detection, E = estimated from measured value\rAdditional values can be defined or quality measures according to the local procedure (e.g. % of valid values for aggregation) can be used, but need to be documented in the REFERENCE."
+	},
+	"FLAGSTA": {
+	    "type": "string",
+	    "description": "Status flag [UTF-8 character encoding] for the data defining the level of aggregation of the data value according to the attached list of possible values. If not relevant leave blank.\rA Minimum\rZ Maximum\rS Sum\rX Arithmetic average, mean; e.g. monthly average\rW Weighted mean\rXA average monthly minimum\rXZ average monthly maximum\rSZ maximum daily sum\rM Mode\rAdditional values can be defined, but need to be documented in the REFERENCE.",
+	    "examples": ["\"A\" (Minimum)", "\"Z\" (Maximum)", "\"S\" (Sum)", "\"X\" (Arithmetic average, mean; e.g. monthly average)", "\"W\" (Weighted mean)", "\"XA\" (average monthly minimum)", "\"XZ\" (average monthly maximum)", "\"SZ\" (maximum daily sum)", "\"M\" (Mode)"]
+	},
+	"GEOSPAT_FEATURE": {
+	    "description": "Geospatial feature [UTF-8 character encoding or URL/URI] is the (computable) geospatial representation. It could also be a WKT, a URI pointing to an online resource (WFS feature, GeoJson, …), or at least a textual description identifying the geometry/spatial feature (like in the case of rivers, roads, trails, toponyms, etc.)",
+	    "type": "string"
+	},
+	"HABITAT_TYPE": {
+	    "description": "Habitat type [UTF-8 character encoding] in which the Event occurred using local or existing classification or reference to a code list (as defined in REFERENCE).\\rExample: Beech forest",
+	    "type": "string"
+	},
+	"HORI_OFFSET": {
+	    "description": "Horizontal offset [number] from the reference point of a transect in meter.",
+	    "type": "number"
+	},
+	"LAT": {
+	    "type": "number",
+	    "multipleOf": 1e-06,
+	    "minimum": -90,
+	    "maximum": 90
+	},
+	"LAYER": {
+	    "description": "Code for the ecosystem layer addressed [UTF-8 character encoding] as letter code.\rExamples (LEVEL / Name):T/Tree layer, T1/Tree layer 1, T2/Tree layer 2, T3/Tree layer 3, S/Shrub layer, F/Field layer, B/Bottom layer.\rIf alternative codings are used, this needs to be specified in the REFERENCE.\rExample: T1",
+	    "type": "string"
+	},
+	"LIST_CODE": {
+	    "description": "Name or reference [URL] of the code list; if referring to an existing code list the name of the code list is provided (e.g. DB, EnvThes). If the code is defined by the user, use ‘ADD’ as identification",
+	    "type": "string"
+	},
+	"LON": {
+	    "type": "number",
+	    "multipleOf": 1e-06,
+	    "minimum": -180,
+	    "maximum": 180
+	},
+	"MEDIUM": {
+	    "description": "Sampled medium [UTF-8 character encoding] – as the code for the sampled medium in the observation procedure\nAIR air including meteorology\nSOIL soil\nSOILWAT soil water\nWATER runoff and groundwater\nSEDIMENT sediments in aquatic environments\nLITTER litter fall\nBIOCOM biological communities\nHUMPOP human population\nSITECHAR site characteristics (as habitat or landscape structure)\nAdditional values need to be defined in the REFERENCE.\\rExample: Sampled medium [UTF-8 character encoding] – as the code for the sampled medium in the observation procedure\nAIR air including meteorology\nSOIL soil\nSOILWAT soil water\nWATER runoff and groundwater\nSEDIMENT sediments in aquatic environments\nLITTER litter fall\nBIOCOM biological communities\nHUMPOP human population\nSITECHAR site characteristics (as habitat or landscape structure)\nAdditional values need to be defined in the REFERENCE.",
+	    "type": "string"
+	},
+	"METH_DESCR": {
+	    "description": "Short description of the method [UTF-8 character encoding] applied in the sampling campaign, e.g. on how the plots were selected from the total population (selection of plots, observation points, etc.) and the observation was done\nCondition: Please provide, if not contained in METHOD.\\rExample: Random sampling of spruce stands in the entire area of the site; 5 regularly spaced (10 m) positions on a transect; etc.",
+	    "type": "string"
+	},
+	"NAME": {
+	    "description": "Full name [UTF-8 character encoding] defined as the full name of the term,e.g. full species name\rExample: Fagus sylvatica L.",
+	    "type": "string"
+	},
+	"NOTES": {
+	    "description": "Notes [UTF-8 character encoding] on of a) an indicator of the existence of, b) a reference to (publication, URI), or c) the text of notes taken in the field about the Event.\\rExample:",
+	    "type": "string"
+	},
+	"PARENT_EVENT_ID": {
+	    "description": "An event identifier [UTF-8 character encoding] for the super event which is composed of one or more sub-sampling events. The value must refer to an existing EVENT_ID. If the identifier is local it must exist within the given dataset. May be a globally unique identifier or an identifier specific to the data set. This either can be a sample number or the number of a vegetation relevee. Note: reference to the location (STATION_CODE) is given in the data and is not repeated in the EVENT.\\rExample: SW0045ZOE_20200912 or VegRel_45_20200912",
+	    "type": "string"
+	},
+	"PHYS_SAMPLE": {
+	    "description": "Physical sample ()Boolean; 0/-1] taken and stored. A SAMPLE is the representative part or a single item from a larger whole or group. Please, provide a information if you have taken and stored a physical sample and you can provide details on\nCondition: if yes [-1] a description in SAMPLE needs to be provided.\\rExample: 0",
+	    "type": "string"
+	},
+	"SAMP_EFFORT": {
+	    "description": "The amount of effort [UTF-8 character encoding] expended during an Event.\\rExample: 40 trap-nights, 10 observer-hours; 10 km by foot; 30 km by car",
+	    "type": "string"
+	},
+	"SAMP_SIZE": {
+	    "description": "A numeric value [number] for a measurement of the size (e.g. length, area, or volume) of a sample in a sampling event.\\rExample: A numeric value [number] for a measurement of the size (e.g. length, area, or volume) of a sample in a sampling event.",
+	    "type": "number"
+	},
+	"SAMPLE_ID": {
+	    "description": "Reference to the Sample-ID [UTF-8 character encoding] as defined in SAMPLE\rCondition: only used, if a sample is taken and analysed and information on the sample is relevant and provided\rExample: S0001_2020_A",
+	    "type": "string",
+	    "$comment": "obligatory pattern for sample ID?"
+	},
+	"SITE_CODE": {
+	    "description": "Site code [URL] - reference to LTER site and LTSER Platform on DEIMS-SDR. Please provide the deims.id for the site or platform",
+	    "type": "string",
+	    "pattern": "^https://deims.org/[a-zA-Z0-9]{8}-([a-zA-Z0-9]{4}-){3}[a-zA-Z0-9]{12}$"
+	},
+	"SOIL_TYPE": {
+	    "description": "Soil type [UTF-8 character encoding] in which the Event occurred using local or existing classification or reference to a code list (as defined in REFERENCE).\\rExample:",
+	    "type": "string"
+	},
+	"STATION_CODE": {
+	    "type": "string"
+	},
+	"TAXA": {
+	    "description": "Name of entity observed [UTF-8 character encoding] (e.g. species name or habitat type) either defined by a letter code (e.g. genus & species or abbreviation), a number code or the full name. In case of using letter codes or number codes the definition needs to be provided in the REFERENCE.\rExample: FAG SYLV",
+	    "type": "string"
+	},
+	"TIME": {
+	    "type": "string",
+	    "anyOf": [
+		{
+		    "type": "string",
+		    "format": "date-time"
+		},
+		{
+		    "type": "string",
+		    "format": "date"
+		},
+		{
+		    "type": "string",
+		    "pattern": "[0-9]{4}(-[0-1]{1}[0-9]{1})?$"
+		}
+	    ]
+	},
+	"UNIT": {
+	    "description": "Unit of variable observed [UTF-8 character encoding]. This information needs to be provided together with the methods, if not provided together with the DATA.\nFor the units the SI units (https://physics.nist.gov/cuu/Units/units.html) are used.",
+	    "type": "string"
+	},
+	"VALUE": {
+	    "description": "i) Data value [[UTF-8 character encoding] or ii) number of the observation. The comma separator needs to be consistently used in the data file either being ‘,’ or ‘.’",
+	    "type": "string"
+	},
+	"VARIABLE": {
+	    "description": "Code for Variable observed [UTF-8 character encoding] for the variable / parameter name as abbreviation. If possible, use standard encodings for the variable names (e.g. ICP Integrated Monitoring). Additional values can be defined, but need to be documented in the REFERENCE\rExample: ABUND",
+	    "type": "string"
+	},
+	"VERT_OFFSET": {
+	    "description": "Height of measurement [decimal number] in [cm] as vertical offset from the surface level. For terrestrial ecosystems this is above the land surface. For aquatic or marine ecosystems this is the water surface. Values can be positive (offset above surface) or negative (offset below surface).\rExample: 20",
+	    "type": "number",
+	    "multipleOf": 1
+	}
+    }
+}

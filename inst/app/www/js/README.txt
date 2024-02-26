@@ -1,0 +1,1 @@
+To use validate.js in the client's browser, it has to be compiled from validate.js.src with browserify.

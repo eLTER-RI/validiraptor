@@ -1,0 +1,22 @@
+{
+    "$id": "https://velociraptor.example/sample",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title" : "eLTER sample schema",
+    "description" : "specification of eLTER sample reports",
+    "type" : "object",
+    "properties" : {
+
+	"SITE_CODE": {"$ref": "shared#/definitions/SITE_CODE"},
+	"STATION_CODE": {"$ref": "shared#/definitions/STATION_CODE"},
+	"EVENT_ID": {"$ref": "shared#/definitions/EVENT_ID"},
+	"SAMPLE_ID": {"$ref": "shared#/definitions/SAMPLE_ID"},
+	"MEDIUM": {"$ref": "shared#/definitions/MEDIUM"},
+	"TIME_FROM": {"$ref": "shared#/definitions/TIME"},
+	"TIME_TO": {"$ref": "shared#/definitions/TIME"},
+	"METH_DESCR": {"$ref": "shared#/definitions/METH_DESCR"},
+	"SAMP_SIZE": {"$ref": "shared#/definitions/SAMP_SIZE"},
+	"UNIT": {"$ref": "shared#/definitions/UNIT"},
+	"NOTES": {"$ref": "shared#/definitions/NOTES"}
+    },
+    "required" : ["SITE_CODE", "STATION_CODE", "SAMPLE_ID", "TIME_FROM", "TIME_TO"]
+}

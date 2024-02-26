@@ -1,0 +1,16 @@
+---
+title: "Formats"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Formats}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# Formats
+Data are provided as **[CSV](https://en.wikipedia.org/wiki/Comma-separated_values)**. At the server, these data is converted to and handled as R structures (dataframes). As mentioned above, validation happens in the client browser, using Javascript code. Accordingly the data, together with the schemas are sent back to the client as a **[JSON](https://www.json.org/json-en.html)** text. This information is converted at the client into Javascript objects which can be handled by abovementioned Javascript validation library `ajv`. Likewise, the validation result is shipped back as a JSON string which gets parsed back into R structures at the server.
+
+<figure>
+<object data="formats.svg"> </object>
+<figcaption>formats used for data exchange and validation</figcaption>
+</figure>

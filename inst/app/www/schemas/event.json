@@ -1,0 +1,25 @@
+{
+    "$id": "https://velociraptor.example/event",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+	"SITE_CODE": {"$ref": "shared#/definitions/SITE_CODE"},
+	"STATION_CODE": {"$ref": "shared#/definitions/STATION_CODE"},
+	"EVENT_ID": {"$ref": "shared#/definitions/EVENT_ID"},
+	"TIME_FROM" :{"$ref": "shared#/definitions/TIME"},
+	"TIME_TO" : {"$ref": "shared#/definitions/TIME"},
+	"METH_DESCR" : {"$ref": "shared#/definitions/METH_DESCR"},
+	"EVENT_EFFORT" : {"$ref": "shared#/definitions/EVENT_EFFORT"},
+	"UNIT" : {"$ref": "shared#/definitions/UNIT"},
+	"PHYS_SAMPLE" : {"$ref": "shared#/definitions/PHYS_SAMPLE"},
+	"NOTES" : {"$ref": "shared#/definitions/NOTES"},
+	"PARENT_EVENT_ID" : {"$ref": "shared#/definitions/PARENT_EVENT_ID"},
+	"SAMP_EFFORT" : {"$ref": "shared#/definitions/SAMP_EFFORT"},
+	"HABITAT_TYPE" : {"$ref": "shared#/definitions/HABITAT_TYPE"},
+	"SOIL_TYPE" : {"$ref": "shared#/definitions/SOIL_TYPE"}
+    },
+    "required" : ["SITE_CODE", "STATION_CODE", "EVENT_ID", "TIME_FROM", "TIME_TO",
+		  "PHYS_SAMPLE"]
+
+}
+

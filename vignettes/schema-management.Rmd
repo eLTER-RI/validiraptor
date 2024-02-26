@@ -1,0 +1,56 @@
+---
+title: "Schema management"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Schema management}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+For data validation, Validiraptor uses rulesets specified as **[JSON schemas](https://json-schema.org/)**. The rulesets are divided into **topical** and **shared** rules. Topical rules apply to a specific domain (e. g., a station report or a set of observation data), while shared rules lay down general specifications (date format, pattern for site codes etc.).
+
+## Linkage between topical and shared schema
+<div class="alert alert-warning">
+<strong>Redefine shared rules only once, in the shared schema!</strong>
+</div>
+
+Example: The valid pattern for the `SITE_CODE` (a primary identifier for various topical data) is defined only once, in the shared schema, so that it has to be changed in one place only, should the pattern be updated.
+
+The shared definitions [are referred](https://json-schema.org/understanding-json-schema/structuring#dollarref) from the topical schema with the `$id` of the shared schema and the `$ref` keyword in the topical schema.
+<figure>
+<pre>
+ {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://velociraptor.example/station",
+    "type": "object",
+        "properties": {
+            <mark>"SITE_CODE" : {"$ref": "shared#/definitions/SITE_CODE"}</mark>,
+            "STYPE" : {
+                "description" : "spatial type; specified elsewhere",
+                "type" : "string", "enum" : ["PT", "AREA", "VLN", "HLN"]
+    	    },
+    ...
+}
+</pre>
+<figcaption>A topical schema looks up the SITE_CODE in the shared schema.</figcaption>
+</figure>
+
+Note that the URL-part of the URI (*viz.* `https://velociraptor.example` of `https://velociraptor.example/station`) does not resolve into an existing web domain. Its sole function is to constitute a common parent with the shared schema's `$id` (`https://velociraptor.example/shared`).
+
+## schema location
+
+All schemas are stored as text files named '<topic>.json' in the 'schemas' subfolder of this app's 'www' static asset folder.
+
+```
+dir('./R/inst/app/www/schemas') |> as.data.frame()
+```
+```{r, echo = FALSE}
+dir('../R/inst/app/www/schemas') |> as.data.frame()
+```
+
+
+
+
+
+
+

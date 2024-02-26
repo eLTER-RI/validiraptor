@@ -1,0 +1,16 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://velociraptor.example/reference",
+    "title" : "eLTER reference",
+    "description" : "specification of eLTER reference reports",
+    "type" : "object",
+    "properties" : {
+	"FIELD_NAME" : {"$ref": "shared#/definitions/FIELD_NAME"},
+	"CODE" : {"$ref": "shared#/definitions/CODE"},
+	"NAME" : {"$ref": "shared#/definitions/NAME"},
+	"DEFINITION" : {"$ref": "shared#/definitions/DEFINITION"},
+	"LIST_CODE" : {"$ref": "shared#/definitions/LIST_CODE"},
+	"CODE_URL" : {"$ref": "shared#/definitions/CODE_URL"}
+    },
+    "required" : ["FIELD_NAME", "CODE", "NAME"]
+}

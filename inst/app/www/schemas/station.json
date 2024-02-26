@@ -1,0 +1,70 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://velociraptor.example/station",
+    "type": "object",
+    "properties": {
+	"SITE_CODE" : {"$ref": "shared#/definitions/SITE_CODE"},
+	"STYPE" : {
+            "description" : "spatial type; specified elsewhere",
+	    "type" : "string", "enum" : ["PT", "AREA", "VLN", "HLN"]
+	},
+        "STATION_CODE" : {"$ref": "shared#/definitions/STATION_CODE"},
+	"LAT" : {"$ref": "shared#/definitions/LAT"},
+	"LON" : {"$ref": "shared#/definitions/LON"},
+	"ALTITUDE" : {"$ref": "shared#/definitions/ALTITUDE"},
+
+	"PLOTSIZE" : {
+	    "description" : "Plot size [integer] is defined as the size surface area covered by the station/plot in [m2]",
+	    "type" : "number"
+	},
+	"COMMENT" : {
+	    "description" : "Comment [UTF-8 character encoding] include any other information related to the location of the station/plot.",
+	    "type" : "string"   
+	},
+	"GEOSPAT_FEATURE" : {"$ref": "shared#/definitions/GEOSPAT_FEATURE"},
+	"SNAME" : {
+	    "description" : "Station name (UTF-8) provides the name of the station if relevant",
+	    "type" : "string"
+	},
+	"westBoundingCoordinate" : {"$ref" : "shared#/definitions/BBOXCORNER"},
+	"southBoundingCoordinate" : {"$ref" : "shared#/definitions/BBOXCORNER"},
+	"eastBoundingCoordinate" : {"$ref" : "shared#/definitions/BBOXCORNER"},
+	"northBoundingCoordinate" : {"$ref" : "shared#/definitions/BBOXCORNER"},
+	"altitudeMax" : {
+	    "description" : "maximum altitude [decimal number] in meter above sea level [m a.s.l.] for the observed station,negative if below water level; if a single point is represented minimum and maximum are equal",
+	    "type" : "number"
+	},
+	"Country" : {"$ref": "shared#/definitions/Country"},
+	"OperationPeriodSince" : {
+	    "$ref" : "shared#/definitions/DATETIME",
+	    "description" : "Operation period since [ISO date] is the time since the station/plot is operated or when the permanent plot first was established, see ISO 8601: calendar dates as YYYY-MM-DD, time as HH:MM:SS plus a time zone designator (as UTC plus offset), Combined date and time: 2007-04-05T12:30:00-02:00, Any time information i) in UTC (e.g. 2017-03-03T11:00+00:00 or 2017-03-03T11:00UTC or 2017-03-03T11:00Z), or ii) local times, if the UTC offset is provided (e.g. 2017-03-03T13:00+02:00)"
+	},
+	"plotDimension" : {
+	    "description" : "Comma-separated plot dimensions (length, width) of the STATION in meters (integer only).\rExample: 10,15",
+	    "type" : "string",
+	    "pattern" : "[1-9]+[ ,]+[1-9]+"
+	},
+	"numberOfSampleUnit" : {
+	    "description" : "Number of sampling units [integer] - number of elements (e.g. sub-plots) into which the plot is divided along the two dimensions (length x width)",
+	    "type" : "number",
+	    "multipleOf" : 1
+	},
+	"InstHeight" : {
+	    "description" : "Installation height [decimal number] – height of the installation of a sensor or device in [cm] measured from the soil surface. Positive and negative values are possible.",
+	    "type" : "number"
+	},
+	"Local_Habitat_Type" : {
+	    "description" : "Local habitat type [UTF-8 character encoding] using local classification (needs to be defined in the method metadata)\rExample: Beech forest",
+	    "type" : "string"
+	},
+	"EUNIS_Habitat_Type" : {
+	    "description" : "EUNIS habitat type [UTF-8 character encoding] using [EUNIS Habitat Classification] identifier\rExample: G2.3",
+	    "type" : "string"
+	},
+	"Potential_natural_vegetation" : {
+	    "description" : "Potential natural vegetation [UTF-8 character encoding] using local syntaxonomic classification schema (needs to be defined in the method metadata)\rExample: Fagetum",
+	    "type" : "string"
+	}
+    },
+    "required" : ["SITE_CODE", "STATION_CODE", "STYPE", "LON", "LAT", "ALTITUDE"]
+}
