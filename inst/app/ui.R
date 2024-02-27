@@ -4,7 +4,7 @@ library(bslib)
 library(pushbar)
 library(gt)
 library(shinyjs)
-
+library(markdown)
 
 bootstrap5 <- bslib::bs_theme(version = 5)
 

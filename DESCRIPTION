@@ -18,6 +18,7 @@ Imports:
     gt,
     jsonlite,
     listviewer,
+    markdown,
     pushbar,
     shiny,
     shinyjs,
