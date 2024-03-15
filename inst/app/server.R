@@ -87,12 +87,8 @@ server = function(input, output, session){
         ## if result datatable has < 1 items (=errors)
         is_valid(nrow(d_result) < 1)
 
-        output$instancePreview <- instance() |> as.data.frame() |> gt() |> render_gt()
-
-        output$validationResult <- d_result |> renderDataTable(options = list(paging = FALSE,
-                                                                               searching = FALSE,
-                                                                               info = FALSE)
-                                                                )
+        output$instancePreview <- instance() |> as.data.frame() |> renderDataTablePlain()
+        output$validationResult <- d_result |> renderDataTablePlain()
 
         removeClass('resultHeader', c('bg-light', 'bg-danger', 'bg-success'))
         addClass('resultHeader', c('bg-danger', 'bg-success')[is_valid() + 1])

@@ -3,6 +3,11 @@ csv_to_jsonstring  <- function(dataframe){
     dataframe |> head(1) |> unbox() |> toJSON() |> as.character()
 }
 
+
+## render plain dataTableOutput:
+renderDataTablePlain <- \(expr) renderDataTable(expr, options = list(paging = FALSE, searching = FALSE, info = FALSE))
+
+
 ## create a drag & drop file input (author: Nan Xiao)
 ## https://nanx.me/blog/post/shiny-file-input-area/
 fileInputArea <- function(inputId, label, multiple = FALSE, accept = NULL,

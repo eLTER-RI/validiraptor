@@ -2,7 +2,6 @@ library(shiny)
 library(listviewer)
 library(bslib)
 library(pushbar)
-library(gt)
 library(shinyjs)
 library(markdown)
 
@@ -79,7 +78,7 @@ navbarPage(title = 'Validiraptor',
                                                       )
                                                     ),
                                         card_body(
-                                            gt_output('instancePreview'),
+                                            dataTableOutput('instancePreview'),
                                             )
                                         ),
                                    div(id = 'errorTable',
