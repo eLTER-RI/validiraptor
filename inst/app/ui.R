@@ -54,7 +54,8 @@ navbarPage(title = 'Validiraptor',
                                    tabPanel('paste',
                                             textAreaInput('dataPaster', label = '',
                                                           placeholder = 'paste header and first data row here')
-                                            )
+                                            ),
+                                   tabPanel('use example', div(id = 'exampleSelector'))
                                )                                  
                                ),
                         column(8,
@@ -70,7 +71,7 @@ navbarPage(title = 'Validiraptor',
                                div(id = 'resultPanel',
                                    card(card_header(id = 'resultHeader',
                                                     class = "bg-light",
-                                                    p('The first row of your data is ',
+                                                    p('Judging from the first row, this data is ',
                                                       textOutput('verdict', inline = TRUE),
                                                       'instance of',
                                                       textOutput('schemaInfo', inline = TRUE),

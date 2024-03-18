@@ -27,7 +27,15 @@ server = function(input, output, session){
     is_valid <- reactiveVal(FALSE) ##
 
 
-    
+    ## insert actionButtons in upload tabset, one for each example data:
+    insertUI(selector = '#exampleSelector',
+             ui = radioGroupButtons('exampleFileName', label = '',
+                          choices = c('no, thanks', list.files('www/examples', pattern = '\\.csv$')),
+                          selected = 'no, thanks',
+                          direction = 'vertical'
+                          )
+             )
+
 
     ## these are the names of the files (without file extension) from which
     ## to read the schemas (and submit for client-side JS validation)
@@ -109,15 +117,26 @@ server = function(input, output, session){
 
     ## digest uploaded file:
     observe({
-        req(input$filePicker)
-        ## read header and first data row of uploaded file, convert to JSON object description, 
-        ## update instance:
-        read.csv2(instanceFile()$datapath, header = TRUE, sep = sep(), dec = '.') |>
-            head(1) |>
-            instance()
+        file_path <- instanceFile()$datapath
+        ## read header and first data row of instance file, convert to JSON object description, 
+        ## update instance and revalidate:
+        read.csv2(file_path, header = TRUE, sep = sep(), dec = '.') |>
+            head(1) |>  instance()
+        revalidate()        
+    }) |>
+        bindEvent(input$filePicker, ignoreNULL = TRUE)
+
+    ## digest selected example file:
+    observe({
+        req(input$exampleFileName)
+        file_path <- file.path('www/examples', input$exampleFileName)
+        tryCatch(read.csv2(file_path, header = TRUE, sep = sep(), dec = '.') |>
+                 head(1) |>  instance(),
+                 error = \(e) NULL
+                 )
         revalidate()
-    })|>
-        bindEvent(input$filePicker)
+    }) |>
+        bindEvent(input$exampleFileName, ignoreNULL = TRUE, ignoreInit = TRUE)
 
 
     observe(if(!is.null(instance())){
