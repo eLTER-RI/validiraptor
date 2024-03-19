@@ -1,3 +1,6 @@
+get_schema_from_repo <- \(name) jsonlite::read_json(sprintf('https://raw.githubusercontent.com/eLTER-RI/validiraptor_schemas/main/schemas/%s.json', name))
+
+
 ## helper functions to source by server.R
 csv_to_jsonstring  <- function(dataframe){
     dataframe |> head(1) |> unbox() |> toJSON() |> as.character()

@@ -10,8 +10,8 @@ vignette: >
 For data validation, Validiraptor uses rulesets specified as **[JSON schemas](https://json-schema.org/)**. The rulesets are divided into **topical** and **shared** rules. Topical rules apply to a specific domain (e. g., a station report or a set of observation data), while shared rules lay down general specifications (date format, pattern for site codes etc.).
 
 ## Linkage between topical and shared schema
-<div class="alert alert-warning">
-<strong>Redefine shared rules only once, in the shared schema!</strong>
+<div class="alert alert-info">
+Redefine *shared* rules only once, in the *shared* schema!
 </div>
 
 Example: The valid pattern for the `SITE_CODE` (a primary identifier for various topical data) is defined only once, in the shared schema, so that it has to be changed in one place only, should the pattern be updated.
@@ -38,15 +38,11 @@ The shared definitions [are referred](https://json-schema.org/understanding-json
 Note that the URL-part of the URI (*viz.* `https://velociraptor.example` of `https://velociraptor.example/station`) does not resolve into an existing web domain. Its sole function is to constitute a common parent with the shared schema's `$id` (`https://velociraptor.example/shared`).
 
 ## schema location
+<div class="alert alert-info">
+All schemas are stored in, and read from, JSON text files named '<topic>.json'. These are stored in the folder `schemas` at https://github.com/eLTER-RI/validiraptor_schemas.
+</div>
 
-All schemas are stored as text files named '<topic>.json' in the 'schemas' subfolder of this app's 'www' static asset folder.
-
-```
-dir('./R/inst/app/www/schemas') |> as.data.frame()
-```
-```{r, echo = FALSE}
-dir('../R/inst/app/www/schemas') |> as.data.frame()
-```
+A snapshot of the schemas (as of 2024-03-19) is included in the `schemas` subfolder of this app's `www` static asset folder. These are not read by the app, and may be outdated at the time of reading.
 
 
 

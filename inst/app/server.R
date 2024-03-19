@@ -27,6 +27,8 @@ server = function(input, output, session){
     is_valid <- reactiveVal(FALSE) ##
 
 
+
+
     ## insert actionButtons in upload tabset, one for each example data:
     insertUI(selector = '#exampleSelector',
              ui = radioGroupButtons('exampleFileName', label = '',
@@ -44,8 +46,14 @@ server = function(input, output, session){
                       'Reference' = 'reference', 'Event' = 'event', 
                       'Sample' = 'sample', 'License' = 'license'
                       )
-    schema_urls <- sprintf('www/schemas/%s.json', schema_names) |>
+
+    schema_urls <- schema_names |>
+        ## get schemas as included in validiraptor package:
+        ##        sprintf(fmt = 'www/schemas/%s.json') |> 
+        ## get schemas from dedicated github repo:
+        sprintf(fmt = 'https://raw.githubusercontent.com/eLTER-RI/validiraptor_schemas/main/schemas/%s.json') |>
         setNames(schema_names)
+
 
     insertUI('#schemaPickerHere',
              ui = radioGroupButtons(inputId = 'schemaPicker', 
