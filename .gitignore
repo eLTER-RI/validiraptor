@@ -44,8 +44,7 @@ vignettes/*.pdf
 # R Environment Variables
 .Renviron
 
-# pkgdown site
-# docs/
+
 
 # translation temp files
 po/*~
@@ -100,10 +99,9 @@ flycheck_*.el
 
 # directory configuration
 .dir-locals.el
-#docs
+
 .Rproj.user
 .Rdata
 .DS_Store
 .quarto
 #inst/doc
-docs
