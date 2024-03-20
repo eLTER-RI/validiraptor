@@ -75,12 +75,17 @@
 <div class="section level2">
 <h2 id="formats">Formats<a class="anchor" aria-label="anchor" href="#formats"></a>
 </h2>
-<p>Data are provided as <strong><a href="https://en.wikipedia.org/wiki/Comma-separated_values" class="external-link">CSV</a></strong>. At the server, these data is converted to and handled as R structures (dataframes). As mentioned above, validation happens in the client browser, using Javascript code. Accordingly the data, together with the schemas are sent back to the client as a <strong><a href="https://www.json.org/json-en.html" class="external-link">JSON</a></strong> text. This information is converted at the client into Javascript objects which can be handled by abovementioned Javascript validation library <code>ajv</code>. Likewise, the validation result is shipped back as a JSON string which gets parsed back into R structures at the server.</p>
-<figure><object data="formats.svg">
-</object>
+<ul>
+<li>Data are uploaded as <strong><a href="https://en.wikipedia.org/wiki/Comma-separated_values" class="external-link">CSV</a></strong>.</li>
+<li>At the server, these data is converted to and handled as R structures (dataframes).</li>
+<li>Validation* happens in the client’s browser, based on the <strong><a href="https://ajv.js.org/" class="external-link">ajv</a> library</strong>. To this purpose, data and validation results are shipped in <strong><a href="https://www.json.org/json-en.html" class="external-link">JSON</a></strong> format between server and browser</li>
+</ul>
+<figure><object data="formats.svg"></object>
 <figcaption>
 formats used for data exchange and validation
-</figcaption></figure>
+</figcaption></figure><ul>
+<li>checking compliance of the data with a given schema</li>
+</ul>
 </div>
   </main>
 </div>
