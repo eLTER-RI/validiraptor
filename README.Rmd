@@ -18,9 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-<object data='inst/app/www/validiraptor.svg'/>
-
-
+# pkgdown <img src='man/figures/validiraptor.png' align='right' />
 
 Validiraptor launches a web app for the validation of data structures using JSON schema.
 
@@ -44,3 +42,7 @@ To launch the documentation in your browser:
 ```
 run_site()
 ```
+
+## Funding
+This work received funding from [eLTER](https://elter-ri.eu/)
+

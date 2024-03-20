@@ -5,6 +5,7 @@
 
 <!-- badges: start -->
 <!-- badges: end -->
+<object data='inst/app/www/validiraptor.svg' height = 100 />
 
 Validiraptor launches a web app for the validation of data structures
 using JSON schema.
@@ -27,3 +28,7 @@ To launch the app locally:
 To launch the documentation in your browser:
 
     run_site()
+
+## Funding
+
+This work received funding from [eLTER](https://elter-ri.eu/)
