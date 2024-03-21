@@ -32,9 +32,8 @@ server = function(input, output, session){
     ## insert actionButtons in upload tabset, one for each example data:
     insertUI(selector = '#exampleSelector',
              ui = radioGroupButtons('exampleFileName', label = '',
-                          choices = c('no, thanks', list.files('www/examples', pattern = '\\.csv$')),
-                          selected = 'no, thanks',
-                          direction = 'vertical'
+                          choices = c(list.files('www/examples', pattern = '\\.csv$')),
+                          selected = NA, direction = 'vertical'
                           )
              )
 
@@ -100,11 +99,26 @@ server = function(input, output, session){
                              error = \(e) data.frame(message = 'no data')
                              )
         adviseSeparator(d_result)
+
+        
         ## if result datatable has < 1 items (=errors)
         is_valid(nrow(d_result) < 1)
 
+        ## apply cosmetics to initial error report:
+        if(!is_valid()){
+            d_result <- cbind(d_result[-4], d_result[[4]]) ## unnest list column 4 (with dataframes)
+            d_result$affected <- d_result[intersect(c('instancePath', 'missingProperty'), names(d_result))] |>
+                apply(MARGIN = 1, FUN = \(cols) paste(cols, collapse = ' ') |>
+                                                gsub(pattern = '/|NA', replacement = '')
+                      )
+            d_result$message <- gsub('must have required property', 'data must contain field', d_result$message)
+            d_result <- d_result[intersect(c('affected', 'message'), names(d_result))]
+        }
+        
         output$instancePreview <- instance() |> as.data.frame() |> renderDataTablePlain()
         output$validationResult <- d_result |> renderDataTablePlain()
+
+
 
         removeClass('resultHeader', c('bg-light', 'bg-danger', 'bg-success'))
         addClass('resultHeader', c('bg-danger', 'bg-success')[is_valid() + 1])
@@ -118,6 +132,8 @@ server = function(input, output, session){
         read.csv2(text = input$dataPaster, header = TRUE, sep = sep(), dec = '.') |>
             head(1) |>
             instance()
+
+        updateRadioGroupButtons(session = session, inputId = 'exampleFileName', selected = NA)
         revalidate()
     }) |>
         bindEvent(input$dataPaster)
@@ -130,6 +146,7 @@ server = function(input, output, session){
         ## update instance and revalidate:
         read.csv2(file_path, header = TRUE, sep = sep(), dec = '.') |>
             head(1) |>  instance()
+        updateRadioGroupButtons(session = session, inputId = 'exampleFileName', selected = NA)
         revalidate()        
     }) |>
         bindEvent(input$filePicker, ignoreNULL = TRUE)
