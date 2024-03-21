@@ -4,6 +4,8 @@ library(bslib)
 library(pushbar)
 library(shinyjs)
 library(markdown)
+library(shinyEffects) ## to add pulse effect to UI elements
+
 
 bootstrap5 <- bslib::bs_theme(version = 5)
 
@@ -16,6 +18,9 @@ navbarPage(title = 'Validiraptor',
            theme = bootstrap5,
            useShinyjs(),
            pushbar::pushbar_deps(), ## to create drawer (slide-in)
+
+           div(id = 'shinyEffectsPlaceholder'),
+
            img(src = 'validiraptor.svg', height = '50px'), 
            ## broadcast whether one of filePicker, dataPaster or schemaPicker,
            ## because server.R listes to all three in one function:
@@ -36,7 +41,7 @@ navbarPage(title = 'Validiraptor',
                     fluidRow(
                         column(2, h1('instance')),
                         column(8, h1('validation')),
-                        column(2, h1('schema'))
+                        column(2, h1(span(id = 'H1Schema', 'schema')))
                     ),
 
                     fluidRow(

@@ -22,7 +22,8 @@ Imports:
     pushbar,
     shiny,
     shinyjs,
-    shinyWidgets
+    shinyWidgets,
+    shinyEffects
 Suggests: 
     knitr,
     rmarkdown

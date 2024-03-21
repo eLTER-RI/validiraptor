@@ -87,6 +87,13 @@ server = function(input, output, session){
     ## send instance and schema to the client for validation:
     ## --------------------------------------------------------------------------------
     revalidate <- function(){
+        ## you can't trigger the shinyEffects effect directly but have to insert a UI element
+        ## conaining the shinyEffects expression, e. g. setPulse:
+        insertUI(selector = '#shinyEffectsPlaceholder',
+                 ui = setPulse(id = 'H1Schema', duration = 2, iteration = 3)
+                 )
+
+
         instance_json <- head(instance(), 1) |> as.list() |> jsonlite::toJSON(auto_unbox = TRUE)
         session$sendCustomMessage('validate', 
                                   list(schemas = schemas(), instance = instance_json)
