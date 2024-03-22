@@ -43,6 +43,6 @@ To launch the documentation in your browser:
 run_site()
 ```
 
-## Funding
-This work received funding from [eLTER](https://elter-ri.eu/)
+## Sponsors
+This app was developed with funding from [**eLTER** PLUS](https://elter-ri.eu/elter-plus) and [BioDT](https://biodt.eu/).
 

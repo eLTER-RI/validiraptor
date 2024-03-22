@@ -60,7 +60,10 @@ navbarPage(title = 'Validiraptor',
                                             textAreaInput('dataPaster', label = '',
                                                           placeholder = 'paste header and first data row here')
                                             ),
-                                   tabPanel('use example', div(id = 'exampleSelector'))
+                                   tabPanel('demo',
+                                            tags$small('Pick one of these example data to get to know the app:'),
+                                            div(id = 'exampleSelector')
+                                            )
                                )                                  
                                ),
                         column(8,

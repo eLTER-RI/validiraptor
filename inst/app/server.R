@@ -92,6 +92,7 @@ server = function(input, output, session){
         insertUI(selector = '#shinyEffectsPlaceholder',
                  ui = setPulse(id = 'H1Schema', duration = 2, iteration = 3)
                  )
+        hide('alertWrongSeparator')
 
 
         instance_json <- head(instance(), 1) |> as.list() |> jsonlite::toJSON(auto_unbox = TRUE)
