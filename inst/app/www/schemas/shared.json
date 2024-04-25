@@ -95,7 +95,7 @@
 	    "maximum": 180
 	},
 	"MEDIUM": {
-	    "description": "Sampled medium [UTF-8 character encoding] – as the code for the sampled medium in the observation procedure\nAIR air including meteorology\nSOIL soil\nSOILWAT soil water\nWATER runoff and groundwater\nSEDIMENT sediments in aquatic environments\nLITTER litter fall\nBIOCOM biological communities\nHUMPOP human population\nSITECHAR site characteristics (as habitat or landscape structure)\nAdditional values need to be defined in the REFERENCE.\\rExample: Sampled medium [UTF-8 character encoding] – as the code for the sampled medium in the observation procedure\nAIR air including meteorology\nSOIL soil\nSOILWAT soil water\nWATER runoff and groundwater\nSEDIMENT sediments in aquatic environments\nLITTER litter fall\nBIOCOM biological communities\nHUMPOP human population\nSITECHAR site characteristics (as habitat or landscape structure)\nAdditional values need to be defined in the REFERENCE.",
+	    "description": "Sampled medium [UTF-8 character encoding]  as the code for the sampled medium in the observation procedure\nAIR air including meteorology\nSOIL soil\nSOILWAT soil water\nWATER runoff and groundwater\nSEDIMENT sediments in aquatic environments\nLITTER litter fall\nBIOCOM biological communities\nHUMPOP human population\nSITECHAR site characteristics (as habitat or landscape structure)\nAdditional values need to be defined in the REFERENCE.\\rExample: Sampled medium [UTF-8 character encoding]  as the code for the sampled medium in the observation procedure\nAIR air including meteorology\nSOIL soil\nSOILWAT soil water\nWATER runoff and groundwater\nSEDIMENT sediments in aquatic environments\nLITTER litter fall\nBIOCOM biological communities\nHUMPOP human population\nSITECHAR site characteristics (as habitat or landscape structure)\nAdditional values need to be defined in the REFERENCE.",
 	    "type": "string"
 	},
 	"METH_DESCR": {
@@ -169,7 +169,7 @@
 	    "type": "string"
 	},
 	"VALUE": {
-	    "description": "i) Data value [[UTF-8 character encoding] or ii) number of the observation. The comma separator needs to be consistently used in the data file either being ‘,’ or ‘.’",
+	    "description": "i) Data value [[UTF-8 character encoding] or ii) number of the observation. The comma separator needs to be consistently used in the data file either being \",\" or \".\"",
 	    "type": "string"
 	},
 	"VARIABLE": {
