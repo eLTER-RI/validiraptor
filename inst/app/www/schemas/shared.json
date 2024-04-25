@@ -63,7 +63,7 @@
 	    "examples": ["\"A\" (Minimum)", "\"Z\" (Maximum)", "\"S\" (Sum)", "\"X\" (Arithmetic average, mean; e.g. monthly average)", "\"W\" (Weighted mean)", "\"XA\" (average monthly minimum)", "\"XZ\" (average monthly maximum)", "\"SZ\" (maximum daily sum)", "\"M\" (Mode)"]
 	},
 	"GEOSPAT_FEATURE": {
-	    "description": "Geospatial feature [UTF-8 character encoding or URL/URI] is the (computable) geospatial representation. It could also be a WKT, a URI pointing to an online resource (WFS feature, GeoJson, …), or at least a textual description identifying the geometry/spatial feature (like in the case of rivers, roads, trails, toponyms, etc.)",
+	    "description": "Geospatial feature [UTF-8 character encoding or URL/URI] is the (computable) geospatial representation. It could also be a WKT, a URI pointing to an online resource (WFS feature, GeoJson, etc.), or at least a textual description identifying the geometry/spatial feature (like in the case of rivers, roads, trails, toponyms, etc.)",
 	    "type": "string"
 	},
 	"HABITAT_TYPE": {
