@@ -2,7 +2,7 @@
     "$id": "https://velociraptor.example/shared",
     "definitions": {
 	"ABS_POSITION": {
-	    "description": "Absolute 3D coordinates [decimal number] expressed in decimal degree [dec °] WGS84 using at least 6-digits after the decimal separator of a single observation within the site or station. When a specific location is available in the dataset record (e.g. if the STATION is an area and many observations/records are available within that area, the absolute position is that of the single record).\nCondition 1: if a ABSOLUTE_POSITION is provided the STATION normally is left empty.\nCondition 2: if an ABSOLUTE POSITION is provided the HORIZONTAL OFFSET is left blank.",
+	    "description": "Absolute 3D coordinates [decimal number] expressed in decimal degree  WGS84 using at least 6-digits after the decimal separator of a single observation within the site or station. When a specific location is available in the dataset record (e.g. if the STATION is an area and many observations/records are available within that area, the absolute position is that of the single record).\nCondition 1: if a ABSOLUTE_POSITION is provided the STATION normally is left empty.\nCondition 2: if an ABSOLUTE POSITION is provided the HORIZONTAL OFFSET is left blank.",
 	    "type": "string",
 	    "$comment": "in regular expression, make sure to escape with double backshlash!",
 	    "pattern": "/^([0-9]+(\\.[0-9])?[, ]+){2}([0-9](\\.[0-9]+)?)+$"
@@ -11,7 +11,7 @@
 	    "type": "number"
 	},
 	"BBOXCORNER": {
-	    "description": "bounding box [decimal number] for a station in decimal degree [dec °] WGS84; if a point is represented east and west bounding coordinates are equal",
+	    "description": "bounding box [decimal number] for a station in decimal degree  WGS84; if a point is represented east and west bounding coordinates are equal",
 	    "type": "number"
 	},
 	"CODE": {

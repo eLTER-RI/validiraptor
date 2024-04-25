@@ -1,0 +1,713 @@
+
+R version 4.3.3 (2024-02-29 ucrt) -- "Angel Food Cake"
+Copyright (C) 2024 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R ist freie Software und kommt OHNE JEGLICHE GARANTIE.
+Sie sind eingeladen, es unter bestimmten Bedingungen weiter zu verbreiten.
+Tippen Sie 'license()' or 'licence()' für Details dazu.
+
+R ist ein Gemeinschaftsprojekt mit vielen Beitragenden.
+Tippen Sie 'contributors()' für mehr Information und 'citation()',
+um zu erfahren, wie R oder R packages in Publikationen zitiert werden können.
+
+Tippen Sie 'demo()' für einige Demos, 'help()' für on-line Hilfe, oder
+'help.start()' für eine HTML Browserschnittstelle zur Hilfe.
+Tippen Sie 'q()', um R zu verlassen.
+
+> lintr::lint_package()
+[1minst\app\helpers.R:1:4: [22m[31merror: [39m[error] [1munexpected symbol[22m
+132get_schema_from_repo <- \(name) jsonlite::read_json(sprintf("https://raw.githubusercontent.com/eLTER-RI/validiraptor_schemas/main/schemas/%s.json", name))
+   ^
+[1minst\app\helpers.R:1:81: [22m[34mstyle: [39m[line_length_linter] [1mLines should not be more than 80 characters. This line is 157 characters.[22m
+132get_schema_from_repo <- \(name) jsonlite::read_json(sprintf("https://raw.githubusercontent.com/eLTER-RI/validiraptor_schemas/main/schemas/%s.json", name))
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[1minst\app\helpers.R:6:2: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 0 spaces but is 2 spaces.[22m
+  dataframe |> head(1) |> unbox() |> toJSON() |> as.character()
+~^
+[1minst\app\helpers.R:12:49: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 0 spaces but is 49 spaces.[22m
+                                                 options = list(paging = FALSE,
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\helpers.R:13:64: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 0 spaces but is 64 spaces.[22m
+                                                                searching = FALSE,
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\helpers.R:13:81: [22m[34mstyle: [39m[line_length_linter] [1mLines should not be more than 80 characters. This line is 82 characters.[22m
+                                                                searching = FALSE,
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+[1minst\app\helpers.R:15:49: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 0 spaces but is 49 spaces.[22m
+                                                 )
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\helpers.R:22:26: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 0 spaces but is 26 spaces.[22m
+                          width = NULL, buttonLabel = "Browse...",
+~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\helpers.R:25:2: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 0 spaces but is 2 spaces.[22m
+  restoredValue <- restoreInput(id = inputId, default = NULL)
+~^
+[1minst\app\helpers.R:27:2: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 0 spaces but is 2 spaces.[22m
+  ## Catch potential edge case - ensure that it"s either NULL or a data frame.
+~^
+[1minst\app\helpers.R:29:4: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 0 spaces but is 4 spaces.[22m
+    warning("Restored value for ", inputId, " has incorrect format.")
+~~~^
+[1minst\app\helpers.R:31:2: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 0 spaces but is 2 spaces.[22m
+  }
+~^
+[1minst\app\helpers.R:33:2: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 0 spaces but is 2 spaces.[22m
+  if (!is.null(restoredValue)) {
+~^
+[1minst\app\helpers.R:34:4: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 0 spaces but is 4 spaces.[22m
+    restoredValue <- toJSON(restoredValue, strict_atomic = FALSE)
+~~~^
+[1minst\app\helpers.R:35:2: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 0 spaces but is 2 spaces.[22m
+  }
+~^
+[1minst\app\helpers.R:37:2: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 0 spaces but is 2 spaces.[22m
+  inputTag <- tags$input(
+~^
+[1minst\app\helpers.R:38:4: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 0 spaces but is 4 spaces.[22m
+    id = inputId,
+~~~^
+[1minst\app\helpers.R:41:81: [22m[34mstyle: [39m[line_length_linter] [1mLines should not be more than 80 characters. This line is 98 characters.[22m
+    style = "position: absolute !important; top: -99999px !important; left: -99999px !important;",
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+[1minst\app\helpers.R:43:2: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 0 spaces but is 2 spaces.[22m
+  )
+~^
+[1minst\app\helpers.R:45:2: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 0 spaces but is 2 spaces.[22m
+  if (multiple) {
+~^
+[1minst\app\helpers.R:46:4: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 0 spaces but is 4 spaces.[22m
+    inputTag$attribs$multiple <- "multiple"
+~~~^
+[1minst\app\helpers.R:47:2: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 0 spaces but is 2 spaces.[22m
+  }
+~^
+[1minst\app\helpers.R:49:4: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 0 spaces but is 4 spaces.[22m
+    inputTag$attribs$accept <- paste(accept, collapse = ",")
+~~~^
+[1minst\app\helpers.R:50:2: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 0 spaces but is 2 spaces.[22m
+  }
+~^
+[1minst\app\helpers.R:52:2: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 0 spaces but is 2 spaces.[22m
+  ## Icon from <https://icons.getbootstrap.com/icons/upload/>
+~^
+[1minst\app\helpers.R:57:2: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 0 spaces but is 2 spaces.[22m
+  div(
+~^
+[1minst\app\helpers.R:58:4: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 0 spaces but is 4 spaces.[22m
+    class = "form-group shiny-input-container w-100",
+~~~^
+[1minst\app\helpers.R:62:6: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 0 spaces but is 6 spaces.[22m
+      class = "input-group mb-3",
+~~~~~^
+[1minst\app\helpers.R:65:8: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 0 spaces but is 8 spaces.[22m
+        class = "input-group-btn input-group-prepend w-100",
+~~~~~~~^
+[1minst\app\helpers.R:67:10: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 0 spaces but is 10 spaces.[22m
+          class = "btn btn-area w-100", inputTag,
+~~~~~~~~~^
+[1minst\app\helpers.R:69:14: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 0 spaces but is 14 spaces.[22m
+              style = "margin-top: 2rem;"),
+~~~~~~~~~~~~~^
+[1minst\app\helpers.R:70:10: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 0 spaces but is 10 spaces.[22m
+          div(p(label), style = "font-size: 1.2rem; font-weight: 700; padding-top: 2rem;"),
+~~~~~~~~~^
+[1minst\app\helpers.R:70:81: [22m[34mstyle: [39m[line_length_linter] [1mLines should not be more than 80 characters. This line is 91 characters.[22m
+          div(p(label), style = "font-size: 1.2rem; font-weight: 700; padding-top: 2rem;"),
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+[1minst\app\helpers.R:71:81: [22m[34mstyle: [39m[line_length_linter] [1mLines should not be more than 80 characters. This line is 96 characters.[22m
+          div(p(buttonLabel), style = "font-size: 1rem; font-weight: 400; margin-bottom: 2rem;")
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+[1minst\app\helpers.R:72:8: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 0 spaces but is 8 spaces.[22m
+        )
+~~~~~~~^
+[1minst\app\helpers.R:73:6: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 0 spaces but is 6 spaces.[22m
+      )
+~~~~~^
+[1minst\app\helpers.R:74:4: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 0 spaces but is 4 spaces.[22m
+    ),
+~~~^
+[1minst\app\helpers.R:76:6: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 0 spaces but is 6 spaces.[22m
+      id = paste(inputId, "_progress", sep = ""),
+~~~~~^
+[1minst\app\helpers.R:79:4: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 0 spaces but is 4 spaces.[22m
+    )
+~~~^
+[1minst\app\helpers.R:80:2: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 0 spaces but is 2 spaces.[22m
+  )
+~^
+[1minst\app\server.R:8:8: [22m[34mstyle: [39m[assignment_linter] [1mUse <-, not =, for assignment.[22m
+server = function(input, output, session){
+       ^
+[1minst\app\server.R:8:42: [22m[34mstyle: [39m[brace_linter] [1mThere should be a space before an opening curly brace.[22m
+server = function(input, output, session){
+                                         ^
+[1minst\app\server.R:8:42: [22m[34mstyle: [39m[paren_body_linter] [1mThere should be a space between a right parenthesis and a body expression.[22m
+server = function(input, output, session){
+                                         ^
+[1minst\app\server.R:23:3: [22m[34mstyle: [39m[object_name_linter] [1mVariable and function name style should match snake_case or symbols.[22m
+  instanceFile <- reactive(input$filePicker)
+  ^~~~~~~~~~~~
+[1minst\app\server.R:32:11: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 4 spaces but is 11 spaces.[22m
+           ui = radioGroupButtons("exampleFileName", label = "",
+    ~~~~~~^
+[1minst\app\server.R:33:34: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 6 spaces but is 34 spaces.[22m
+                                  choices = c(list.files("www/examples",
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\server.R:35:46: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 6 spaces but is 46 spaces.[22m
+                                              ),
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\server.R:36:34: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 6 spaces but is 34 spaces.[22m
+                                  selected = NA, direction = "vertical"
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\server.R:37:34: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 4 spaces but is 34 spaces.[22m
+                                  )
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\server.R:38:11: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 2 spaces but is 11 spaces.[22m
+           )
+  ~~~~~~~~^
+[1minst\app\server.R:44:20: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 4 spaces but is 20 spaces.[22m
+                    "Observation data" = "data_observation",
+    ~~~~~~~~~~~~~~~^
+[1minst\app\server.R:48:20: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 2 spaces but is 20 spaces.[22m
+                    )
+  ~~~~~~~~~~~~~~~~~^
+[1minst\app\server.R:50:3: [22m[35mwarning: [39m[object_usage_linter] [1mlocal variable 'schema_urls' assigned but may not be used[22m
+  schema_urls <- schema_names |>
+  ^~~~~~~~~~~
+[1minst\app\server.R:54:81: [22m[34mstyle: [39m[line_length_linter] [1mLines should not be more than 80 characters. This line is 108 characters.[22m
+    sprintf(fmt = "https://raw.githubusercontent.com/eLTER-RI/validiraptor_schemas/main/schemas/%s.json") |>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[1minst\app\server.R:59:11: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 4 spaces but is 11 spaces.[22m
+           ui = radioGroupButtons(inputId = "schemaPicker",
+    ~~~~~~^
+[1minst\app\server.R:60:34: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 6 spaces but is 34 spaces.[22m
+                                  ## enable only after instance  provided:
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\server.R:66:34: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 4 spaces but is 34 spaces.[22m
+                                  )
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\server.R:67:11: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 2 spaces but is 11 spaces.[22m
+           )
+  ~~~~~~~~^
+[1minst\app\server.R:69:33: [22m[34mstyle: [39m[brace_linter] [1mOpening curly braces should never go on their own line and should always be followed by a new line.[22m
+  output$fileInfo <- renderText({d <- input$filePicker[1,]
+                                ^
+[1minst\app\server.R:69:58: [22m[34mstyle: [39m[commas_linter] [1mCommas should always have a space after.[22m
+  output$fileInfo <- renderText({d <- input$filePicker[1,]
+                                                         ^
+[1minst\app\server.R:70:4: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 34 spaces but is 4 spaces.[22m
+    ifelse(is.null(d), sprintf("no file uploaded"),
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[1minst\app\server.R:71:11: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 36 spaces but is 11 spaces.[22m
+           sprintf("%s (%s kB)", d$name, d$size)
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+[1minst\app\server.R:72:11: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 34 spaces but is 11 spaces.[22m
+           )
+          ^~~
+[1minst\app\server.R:73:2: [22m[34mstyle: [39m[indentation_linter] [1mHanging indent should be 32 spaces but is 2 spaces.[22m
+  })
+ ^~~~
+[1minst\app\server.R:75:35: [22m[34mstyle: [39m[brace_linter] [1mOpening curly braces should never go on their own line and should always be followed by a new line.[22m
+  output$schemaInfo <- renderText({sn <- input$schemaPicker
+                                  ^
+[1minst\app\server.R:84:3: [22m[34mstyle: [39m[object_name_linter] [1mVariable and function name style should match snake_case or symbols.[22m
+  adviseSeparator <- function(d){
+  ^~~~~~~~~~~~~~~
+[1minst\app\server.R:84:33: [22m[34mstyle: [39m[brace_linter] [1mThere should be a space before an opening curly brace.[22m
+  adviseSeparator <- function(d){
+                                ^
+[1minst\app\server.R:84:33: [22m[34mstyle: [39m[paren_body_linter] [1mThere should be a space between a right parenthesis and a body expression.[22m
+  adviseSeparator <- function(d){
+                                ^
+[1minst\app\server.R:85:7: [22m[34mstyle: [39m[spaces_left_parentheses_linter] [1mPlace a space before left parenthesis, except in a function call.[22m
+    if(!is.null(d) & ncol(d) < 2 & length(unlist(
+      ^
+[1minst\app\server.R:85:20: [22m[35mwarning: [39m[vector_logic_linter] [1mConditional expressions require scalar logical operators (&& and ||)[22m
+    if(!is.null(d) & ncol(d) < 2 & length(unlist(
+                   ^
+[1minst\app\server.R:85:34: [22m[35mwarning: [39m[vector_logic_linter] [1mConditional expressions require scalar logical operators (&& and ||)[22m
+    if(!is.null(d) & ncol(d) < 2 & length(unlist(
+                                 ^
+[1minst\app\server.R:86:6: [22m[34mstyle: [39m[indentation_linter] [1mHanging indent should be 49 spaces but is 6 spaces.[22m
+      strsplit(as.character(d[1, 1]), ","))
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[1minst\app\server.R:87:6: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 4 spaces but is 6 spaces.[22m
+      ) > 1){
+    ~^
+[1minst\app\server.R:87:13: [22m[34mstyle: [39m[brace_linter] [1mThere should be a space before an opening curly brace.[22m
+      ) > 1){
+            ^
+[1minst\app\server.R:87:13: [22m[34mstyle: [39m[paren_body_linter] [1mThere should be a space between a right parenthesis and a body expression.[22m
+      ) > 1){
+            ^
+[1minst\app\server.R:88:6: [22m[34mstyle: [39m[indentation_linter] [1mHanging indent should be 13 spaces but is 6 spaces.[22m
+      show("alertWrongSeparator")} else {hide("alertWrongSeparator")}
+     ^~~~~~~~
+[1minst\app\server.R:88:34: [22m[34mstyle: [39m[brace_linter] [1mClosing curly-braces should always be on their own line, unless they are followed by an else.[22m
+      show("alertWrongSeparator")} else {hide("alertWrongSeparator")}
+                                 ^
+[1minst\app\server.R:88:41: [22m[34mstyle: [39m[brace_linter] [1mOpening curly braces should never go on their own line and should always be followed by a new line.[22m
+      show("alertWrongSeparator")} else {hide("alertWrongSeparator")}
+                                        ^
+[1minst\app\server.R:88:69: [22m[34mstyle: [39m[brace_linter] [1mClosing curly-braces should always be on their own line, unless they are followed by an else.[22m
+      show("alertWrongSeparator")} else {hide("alertWrongSeparator")}
+                                                                    ^
+[1minst\app\server.R:95:27: [22m[34mstyle: [39m[brace_linter] [1mThere should be a space before an opening curly brace.[22m
+  revalidate <- function(){
+                          ^
+[1minst\app\server.R:95:27: [22m[34mstyle: [39m[paren_body_linter] [1mThere should be a space between a right parenthesis and a body expression.[22m
+  revalidate <- function(){
+                          ^
+[1minst\app\server.R:99:13: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 6 spaces but is 13 spaces.[22m
+             ui = setPulse(id = "H1Schema", duration = 2, iteration = 3)
+      ~~~~~~^
+[1minst\app\server.R:99:19: [22m[35mwarning: [39m[object_usage_linter] [1mno visible global function definition for 'setPulse'[22m
+             ui = setPulse(id = "H1Schema", duration = 2, iteration = 3)
+                  ^~~~~~~~
+[1minst\app\server.R:100:13: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 4 spaces but is 13 spaces.[22m
+             )
+    ~~~~~~~~^
+[1minst\app\server.R:104:55: [22m[34mstyle: [39m[pipe_continuation_linter] [1m`|>` should always have a space before it and a new line after it, unless the full pipeline fits on one line.[22m
+    instance_json <- head(instance(), 1) |> as.list() |>
+                                                      ^~
+[1minst\app\server.R:107:30: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 6 spaces but is 30 spaces.[22m
+                              list(schemas = schemas(),
+      ~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\server.R:108:35: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 8 spaces but is 35 spaces.[22m
+                                   instance = instance_json
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\server.R:109:35: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 6 spaces but is 35 spaces.[22m
+                                   )
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\server.R:110:30: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 4 spaces but is 30 spaces.[22m
+                              )
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\server.R:115:26: [22m[34mstyle: [39m[brace_linter] [1mOpening curly braces should never go on their own line and should always be followed by a new line.[22m
+    d_result <- tryCatch({input$validationResult |> fromJSON() |>
+                         ^
+[1minst\app\server.R:115:64: [22m[34mstyle: [39m[pipe_continuation_linter] [1m`|>` should always have a space before it and a new line after it, unless the full pipeline fits on one line.[22m
+    d_result <- tryCatch({input$validationResult |> fromJSON() |>
+                                                               ^~
+[1minst\app\server.R:117:25: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 6 spaces but is 25 spaces.[22m
+                         error = \(e) data.frame(message = "no data")
+      ~~~~~~~~~~~~~~~~~~^
+[1minst\app\server.R:118:25: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 4 spaces but is 25 spaces.[22m
+                         )
+    ~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\server.R:126:7: [22m[34mstyle: [39m[spaces_left_parentheses_linter] [1mPlace a space before left parenthesis, except in a function call.[22m
+    if(!is_valid()){
+      ^
+[1minst\app\server.R:126:20: [22m[34mstyle: [39m[brace_linter] [1mThere should be a space before an opening curly brace.[22m
+    if(!is_valid()){
+                   ^
+[1minst\app\server.R:126:20: [22m[34mstyle: [39m[paren_body_linter] [1mThere should be a space between a right parenthesis and a body expression.[22m
+    if(!is_valid()){
+                   ^
+[1minst\app\server.R:132:36: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 6 spaces but is 36 spaces.[22m
+                                    ] |>
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\server.R:133:41: [22m[34mstyle: [39m[brace_linter] [1mOpening curly braces should never go on their own line and should always be followed by a new line.[22m
+        apply(MARGIN = 1, FUN = \(cols) {paste(cols, collapse = " ") |>
+                                        ^
+[1minst\app\server.R:134:43: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 14 spaces but is 43 spaces.[22m
+                                           gsub(pattern = "/|NA",
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\server.R:135:48: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 16 spaces but is 48 spaces.[22m
+                                                replacement = ""
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\server.R:136:48: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 14 spaces but is 48 spaces.[22m
+                                                )
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\server.R:137:8: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 10 spaces but is 8 spaces.[22m
+        }
+       ^~~
+[1minst\app\server.R:140:31: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 8 spaces but is 31 spaces.[22m
+                               "data must contain field", d_result$message
+        ~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\server.R:141:31: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 6 spaces but is 31 spaces.[22m
+                               )
+      ~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\server.R:144:27: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 6 spaces but is 27 spaces.[22m
+                           ]
+      ~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\server.R:147:61: [22m[34mstyle: [39m[pipe_continuation_linter] [1m`|>` should always have a space before it and a new line after it, unless the full pipeline fits on one line.[22m
+    output$instancePreview <- instance() |> as.data.frame() |>
+                                                            ^~
+[1minst\app\server.R:148:7: [22m[35mwarning: [39m[object_usage_linter] [1mno visible global function definition for 'renderDataTablePlain'[22m
+      renderDataTablePlain()
+      ^~~~~~~~~~~~~~~~~~~~
+[1minst\app\server.R:149:44: [22m[35mwarning: [39m[object_usage_linter] [1mno visible global function definition for 'renderDataTablePlain'[22m
+    output$validationResult <- d_result |> renderDataTablePlain()
+                                           ^~~~~~~~~~~~~~~~~~~~
+[1minst\app\server.R:155:7: [22m[34mstyle: [39m[spaces_left_parentheses_linter] [1mPlace a space before left parenthesis, except in a function call.[22m
+    if(is_valid()){hide("errorTable")} else {show("errorTable")}
+      ^
+[1minst\app\server.R:155:19: [22m[34mstyle: [39m[brace_linter] [1mOpening curly braces should never go on their own line and should always be followed by a new line.[22m
+    if(is_valid()){hide("errorTable")} else {show("errorTable")}
+                  ^
+[1minst\app\server.R:155:19: [22m[34mstyle: [39m[brace_linter] [1mThere should be a space before an opening curly brace.[22m
+    if(is_valid()){hide("errorTable")} else {show("errorTable")}
+                  ^
+[1minst\app\server.R:155:19: [22m[34mstyle: [39m[paren_body_linter] [1mThere should be a space between a right parenthesis and a body expression.[22m
+    if(is_valid()){hide("errorTable")} else {show("errorTable")}
+                  ^~~~~~~~~~~~~~~~~~~~
+[1minst\app\server.R:155:38: [22m[34mstyle: [39m[brace_linter] [1mClosing curly-braces should always be on their own line, unless they are followed by an else.[22m
+    if(is_valid()){hide("errorTable")} else {show("errorTable")}
+                                     ^
+[1minst\app\server.R:155:45: [22m[34mstyle: [39m[brace_linter] [1mOpening curly braces should never go on their own line and should always be followed by a new line.[22m
+    if(is_valid()){hide("errorTable")} else {show("errorTable")}
+                                            ^
+[1minst\app\server.R:155:64: [22m[34mstyle: [39m[brace_linter] [1mClosing curly-braces should always be on their own line, unless they are followed by an else.[22m
+    if(is_valid()){hide("errorTable")} else {show("errorTable")}
+                                                               ^
+[1minst\app\server.R:157:2: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 4 spaces but is 2 spaces.[22m
+  bindEvent(input$validationResult)
+ ^~~
+[1minst\app\server.R:163:14: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 6 spaces but is 14 spaces.[22m
+              dec = "."
+      ~~~~~~~^
+[1minst\app\server.R:164:14: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 4 spaces but is 14 spaces.[22m
+              ) |>
+    ~~~~~~~~~^
+[1minst\app\server.R:169:28: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 6 spaces but is 28 spaces.[22m
+                            inputId = "exampleFileName", selected = NA
+      ~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\server.R:170:28: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 4 spaces but is 28 spaces.[22m
+                            )
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\server.R:173:2: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 4 spaces but is 2 spaces.[22m
+  bindEvent(input$dataPaster)
+ ^~~
+[1minst\app\server.R:183:15: [22m[34mstyle: [39m[pipe_continuation_linter] [1m`|>` should always have a space before it and a new line after it, unless the full pipeline fits on one line.[22m
+      head(1) |>  instance()
+              ^~
+[1minst\app\server.R:185:28: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 6 spaces but is 28 spaces.[22m
+                            inputId = "exampleFileName", selected = NA
+      ~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\server.R:186:28: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 4 spaces but is 28 spaces.[22m
+                            )
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\server.R:196:15: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 8 spaces but is 15 spaces.[22m
+               head(1) |>  instance(),
+        ~~~~~~^
+[1minst\app\server.R:196:24: [22m[34mstyle: [39m[pipe_continuation_linter] [1m`|>` should always have a space before it and a new line after it, unless the full pipeline fits on one line.[22m
+               head(1) |>  instance(),
+                       ^~
+[1minst\app\server.R:198:13: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 4 spaces but is 13 spaces.[22m
+             )
+    ~~~~~~~~^
+[1minst\app\server.R:204:13: [22m[34mstyle: [39m[spaces_left_parentheses_linter] [1mPlace a space before left parenthesis, except in a function call.[22m
+  observe(if(!is.null(instance())){
+            ^
+[1minst\app\server.R:204:35: [22m[34mstyle: [39m[brace_linter] [1mThere should be a space before an opening curly brace.[22m
+  observe(if(!is.null(instance())){
+                                  ^
+[1minst\app\server.R:204:35: [22m[34mstyle: [39m[paren_body_linter] [1mThere should be a space between a right parenthesis and a body expression.[22m
+  observe(if(!is.null(instance())){
+                                  ^
+[1minst\app\server.R:207:28: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 6 spaces but is 28 spaces.[22m
+                            label = NULL,
+      ~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\server.R:211:28: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 4 spaces but is 28 spaces.[22m
+                            )
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\server.R:216:13: [22m[34mstyle: [39m[spaces_left_parentheses_linter] [1mPlace a space before left parenthesis, except in a function call.[22m
+  observe(if(!is.null(schemas()))  hide("alertNoSchema"))
+            ^
+[1minst\app\server.R:217:13: [22m[34mstyle: [39m[spaces_left_parentheses_linter] [1mPlace a space before left parenthesis, except in a function call.[22m
+  observe(if(!is.null(schemas()) & !is.null(instance)) show("resultPanel"))
+            ^
+[1minst\app\server.R:225:29: [22m[34mstyle: [39m[brace_linter] [1mThere should be a space before an opening curly brace.[22m
+      Map(f = \(schema_name){
+                            ^
+[1minst\app\server.R:225:29: [22m[34mstyle: [39m[paren_body_linter] [1mThere should be a space between a right parenthesis and a body expression.[22m
+      Map(f = \(schema_name){
+                            ^
+[1minst\app\server.R:238:40: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 6 spaces but is 40 spaces.[22m
+                                        Map(f = \(s) fromJSON(s)) |> jsonedit()
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\server.R:238:67: [22m[34mstyle: [39m[pipe_continuation_linter] [1m`|>` should always have a space before it and a new line after it, unless the full pipeline fits on one line.[22m
+                                        Map(f = \(s) fromJSON(s)) |> jsonedit()
+                                                                  ^~
+[1minst\app\server.R:239:38: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 2 spaces but is 38 spaces.[22m
+                                      )
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\server.R:248:1: [22m[34mstyle: [39m[trailing_blank_lines_linter] [1mTrailing blank lines are superfluous.[22m
+
+^
+[1minst\app\ui.R:17:11: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 2 spaces but is 11 spaces.[22m
+           position = "fixed-top",
+  ~~~~~~~~^
+[1minst\app\ui.R:22:11: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 2 spaces but is 11 spaces.[22m
+           div(id = "shinyEffectsPlaceholder"),
+  ~~~~~~~~^
+[1minst\app\ui.R:24:11: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 2 spaces but is 11 spaces.[22m
+           img(src = "validiraptor.svg", height = "50px"),
+  ~~~~~~~~^
+[1minst\app\ui.R:30:81: [22m[34mstyle: [39m[line_length_linter] [1mLines should not be more than 80 characters. This line is 100 characters.[22m
+                   if([\"filePicker\", \"dataPaster\", \"schemaPicker\"].indexOf(event.name) != -1){
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+[1minst\app\ui.R:34:13: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 4 spaces but is 13 spaces.[22m
+             )
+    ~~~~~~~~^
+[1minst\app\ui.R:37:11: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 2 spaces but is 11 spaces.[22m
+           tabPanel(id = "tabInput", title = "main",
+  ~~~~~~~~^
+[1minst\app\ui.R:38:20: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 4 spaces but is 20 spaces.[22m
+                    tags$head(tags$script(src = "/js/validate.js" )),
+    ~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:38:66: [22m[34mstyle: [39m[spaces_inside_linter] [1mDo not place spaces before parentheses.[22m
+                    tags$head(tags$script(src = "/js/validate.js" )),
+                                                                 ^
+[1minst\app\ui.R:47:20: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 4 spaces but is 20 spaces.[22m
+                    fluidRow(
+    ~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:49:29: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 8 spaces but is 29 spaces.[22m
+                             tabsetPanel(
+        ~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:51:40: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 12 spaces but is 40 spaces.[22m
+                                        fileInputArea("filePicker",
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:52:54: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 14 spaces but is 54 spaces.[22m
+                                                      label = "Drag & drop, or click for file picker.",
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:52:81: [22m[34mstyle: [39m[line_length_linter] [1mLines should not be more than 80 characters. This line is 103 characters.[22m
+                                                      label = "Drag & drop, or click for file picker.",
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+[1minst\app\ui.R:53:81: [22m[34mstyle: [39m[line_length_linter] [1mLines should not be more than 80 characters. This line is 101 characters.[22m
+                                                      buttonLabel = markdown("accepted format: CSV"),
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+[1minst\app\ui.R:56:54: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 12 spaces but is 54 spaces.[22m
+                                                      ),
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:57:40: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 12 spaces but is 40 spaces.[22m
+                                        textOutput("fileInfo")
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:58:40: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 10 spaces but is 40 spaces.[22m
+                                        ),
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:59:31: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 10 spaces but is 31 spaces.[22m
+                               tabPanel("paste",
+          ~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:60:40: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 12 spaces but is 40 spaces.[22m
+                                        textAreaInput("dataPaster", label = "",
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:61:81: [22m[34mstyle: [39m[line_length_linter] [1mLines should not be more than 80 characters. This line is 107 characters.[22m
+                                                      placeholder = "paste header and first data row here")
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+[1minst\app\ui.R:62:40: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 10 spaces but is 40 spaces.[22m
+                                        ),
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:63:31: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 10 spaces but is 31 spaces.[22m
+                               tabPanel("demo",
+          ~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:64:40: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 12 spaces but is 40 spaces.[22m
+                                        tags$small("Pick one of these example data to get to know the app:"),
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:64:81: [22m[34mstyle: [39m[line_length_linter] [1mLines should not be more than 80 characters. This line is 109 characters.[22m
+                                        tags$small("Pick one of these example data to get to know the app:"),
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[1minst\app\ui.R:66:40: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 10 spaces but is 40 spaces.[22m
+                                        )
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:67:29: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 8 spaces but is 29 spaces.[22m
+                             )
+        ~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:68:29: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 6 spaces but is 29 spaces.[22m
+                             ),
+      ~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:69:22: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 6 spaces but is 22 spaces.[22m
+                      column(8,
+      ~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:70:29: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 8 spaces but is 29 spaces.[22m
+                             div(id = "alertNoInstance", class = "alert alert-warning",
+        ~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:70:81: [22m[34mstyle: [39m[line_length_linter] [1mLines should not be more than 80 characters. This line is 87 characters.[22m
+                             div(id = "alertNoInstance", class = "alert alert-warning",
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+[1minst\app\ui.R:71:33: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 10 spaces but is 33 spaces.[22m
+                                 "please provide an instance first (upload or paste data)"
+          ~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:71:81: [22m[34mstyle: [39m[line_length_linter] [1mLines should not be more than 80 characters. This line is 90 characters.[22m
+                                 "please provide an instance first (upload or paste data)"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+[1minst\app\ui.R:72:33: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 8 spaces but is 33 spaces.[22m
+                                 ),
+        ~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:73:29: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 8 spaces but is 29 spaces.[22m
+                             div(id = "alertWrongSeparator",
+        ~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:74:33: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 10 spaces but is 33 spaces.[22m
+                                 class = "alert alert-warning",
+          ~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:78:33: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 8 spaces but is 33 spaces.[22m
+                                 ),
+        ~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:79:29: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 8 spaces but is 29 spaces.[22m
+                             div(id = "alertNoSchema",
+        ~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:80:33: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 10 spaces but is 33 spaces.[22m
+                                 class = "alert alert-warning",
+          ~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:81:81: [22m[34mstyle: [39m[line_length_linter] [1mLines should not be more than 80 characters. This line is 114 characters.[22m
+                                 "after providing an instance, please select a schema (or change the current one)"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[1minst\app\ui.R:82:33: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 8 spaces but is 33 spaces.[22m
+                                 ),
+        ~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:83:29: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 8 spaces but is 29 spaces.[22m
+                             div(id = "resultPanel",
+        ~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:84:33: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 10 spaces but is 33 spaces.[22m
+                                 card(card_header(id = "resultHeader",
+          ~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:85:50: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 14 spaces but is 50 spaces.[22m
+                                                  class = "bg-light",
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:86:81: [22m[34mstyle: [39m[line_length_linter] [1mLines should not be more than 80 characters. This line is 96 characters.[22m
+                                                  p("Judging from the first row, this data is ",
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+[1minst\app\ui.R:87:81: [22m[34mstyle: [39m[line_length_linter] [1mLines should not be more than 80 characters. This line is 89 characters.[22m
+                                                    textOutput("verdict", inline = TRUE),
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+[1minst\app\ui.R:89:81: [22m[34mstyle: [39m[line_length_linter] [1mLines should not be more than 80 characters. This line is 92 characters.[22m
+                                                    textOutput("schemaInfo", inline = TRUE),
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+[1minst\app\ui.R:91:52: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 14 spaces but is 52 spaces.[22m
+                                                    )
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:93:38: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 12 spaces but is 38 spaces.[22m
+                                      card_body(
+            ~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:95:40: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 12 spaces but is 40 spaces.[22m
+                                        )
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:97:33: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 10 spaces but is 33 spaces.[22m
+                                 div(id = "errorTable",
+          ~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:98:37: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 12 spaces but is 37 spaces.[22m
+                                     card(
+            ~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:100:51: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 16 spaces but is 51 spaces.[22m
+                                                   "due to the following errors:"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:100:81: [22m[34mstyle: [39m[line_length_linter] [1mLines should not be more than 80 characters. This line is 81 characters.[22m
+                                                   "due to the following errors:"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:101:51: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 14 spaces but is 51 spaces.[22m
+                                                   ),
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:102:39: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 14 spaces but is 39 spaces.[22m
+                                       card_body(
+              ~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:104:45: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 18 spaces but is 45 spaces.[22m
+                                             dataTableOutput("validationResult")
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:105:45: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 16 spaces but is 45 spaces.[22m
+                                             )
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:106:39: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 14 spaces but is 39 spaces.[22m
+                                       )
+              ~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:108:37: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 10 spaces but is 37 spaces.[22m
+                                     ) |> shinyjs::hidden()
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:109:33: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 8 spaces but is 33 spaces.[22m
+                                 ) |> shinyjs::hidden()
+        ~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:109:36: [22m[34mstyle: [39m[pipe_continuation_linter] [1m`|>` should always have a space before it and a new line after it, unless the full pipeline fits on one line.[22m
+                                 ) |> shinyjs::hidden()
+                                   ^~
+[1minst\app\ui.R:110:29: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 6 spaces but is 29 spaces.[22m
+                             )
+      ~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:111:21: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 6 spaces but is 21 spaces.[22m
+                     ,
+      ~~~~~~~~~~~~~~^
+[1minst\app\ui.R:112:22: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 6 spaces but is 22 spaces.[22m
+                      column(2,
+      ~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:113:29: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 8 spaces but is 29 spaces.[22m
+                             div(id = "schemaPickerHere"),
+        ~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:116:46: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 10 spaces but is 46 spaces.[22m
+                                              from = "right",
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:117:81: [22m[34mstyle: [39m[line_length_linter] [1mLines should not be more than 80 characters. This line is 102 characters.[22m
+                                              style = "padding:5em; width:50%; background-color:#fff",
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+[1minst\app\ui.R:119:51: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 12 spaces but is 51 spaces.[22m
+                                                   actionButton("hideSchema",
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:120:64: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 14 spaces but is 64 spaces.[22m
+                                                                label = icon(name = "times")
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:120:81: [22m[34mstyle: [39m[line_length_linter] [1mLines should not be more than 80 characters. This line is 92 characters.[22m
+                                                                label = icon(name = "times")
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+[1minst\app\ui.R:121:64: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 12 spaces but is 64 spaces.[22m
+                                                                )
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:122:51: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 10 spaces but is 51 spaces.[22m
+                                                   ),
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:123:46: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 10 spaces but is 46 spaces.[22m
+                                              h2("schema details"),
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:125:50: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 12 spaces but is 50 spaces.[22m
+                                                  markdown("You can inspect the rules imposed on a  valid instance by exploring the schemas below.
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1minst\app\ui.R:125:81: [22m[34mstyle: [39m[line_length_linter] [1mLines should not be more than 80 characters. This line is 146 characters.[22m
+                                                  markdown("You can inspect the rules imposed on a  valid instance by exploring the schemas below.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[1minst\app\ui.R:126:81: [22m[34mstyle: [39m[line_length_linter] [1mLines should not be more than 80 characters. This line is 185 characters.[22m
+- **schemaTopic** ist the schema relevant to your specific data (e. g. Station or Observation data) and mainly defines what variables (\"properties\") must or can be part of your data).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[1minst\app\ui.R:127:81: [22m[34mstyle: [39m[line_length_linter] [1mLines should not be more than 80 characters. This line is 123 characters.[22m
+- **shemaShared**, to which schemaTopic refers, specifies rules on the variable level (type, precision, allowed values ...)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[1minst\app\ui.R:129:0: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 10 spaces but is 0 spaces.[22m
+),
+^~~
+[1minst\app\ui.R:131:0: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 8 spaces but is 0 spaces.[22m
+)
+^~
+[1minst\app\ui.R:132:0: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 6 spaces but is 0 spaces.[22m
+)
+^~
+[1minst\app\ui.R:133:0: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 4 spaces but is 0 spaces.[22m
+)
+^~
+[1minst\app\ui.R:134:0: [22m[34mstyle: [39m[indentation_linter] [1mIndentation should be 2 spaces but is 0 spaces.[22m
+),
+^~
+[1minst\app\ui.R:138:1: [22m[34mstyle: [39m[trailing_blank_lines_linter] [1mTrailing blank lines are superfluous.[22m
+
+^
+[1minst\app\ui.R:139:1: [22m[34mstyle: [39m[trailing_blank_lines_linter] [1mTrailing blank lines are superfluous.[22m
+
+^
+[1mR\run_app.R:3:81: [22m[34mstyle: [39m[line_length_linter] [1mLines should not be more than 80 characters. This line is 101 characters.[22m
+run_app <- function() shiny::runApp(appDir = file.path(system.file(package = "validiraptor"), 'app'))
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+[1mR\run_app.R:3:95: [22m[34mstyle: [39m[quotes_linter] [1mOnly use double-quotes.[22m
+run_app <- function() shiny::runApp(appDir = file.path(system.file(package = "validiraptor"), 'app'))
+                                                                                              ^~~~~
+[1mR\run_app.R:4:1: [22m[34mstyle: [39m[trailing_blank_lines_linter] [1mTrailing blank lines are superfluous.[22m
+
+^
+[1mR\run_site.R:3:66: [22m[34mstyle: [39m[quotes_linter] [1mOnly use double-quotes.[22m
+run_site <- function() browseURL(file.path(system.file(package = 'validiraptor'), 'docs/index.html'))
+                                                                 ^~~~~~~~~~~~~~
+[1mR\run_site.R:3:81: [22m[34mstyle: [39m[line_length_linter] [1mLines should not be more than 80 characters. This line is 101 characters.[22m
+run_site <- function() browseURL(file.path(system.file(package = 'validiraptor'), 'docs/index.html'))
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+[1mR\run_site.R:3:83: [22m[34mstyle: [39m[quotes_linter] [1mOnly use double-quotes.[22m
+run_site <- function() browseURL(file.path(system.file(package = 'validiraptor'), 'docs/index.html'))
+                                                                                  ^~~~~~~~~~~~~~~~~
+[1mR\run_site.R:4:1: [22m[34mstyle: [39m[trailing_blank_lines_linter] [1mTrailing blank lines are superfluous.[22m
+
+^
+> 
+> 
