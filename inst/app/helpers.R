@@ -1,6 +1,5 @@
 get_schema_from_repo <- \(name) {
-  jsonlite::read_json(paste0("https://raw.githubusercontent.com/eLTER-RI/",
-                             "validiraptor/main/inst/app/www/",
+  jsonlite::read_json(paste0("https://raw.githubusercontent.com/eLTER-RI/elter-ci-schemas/main/",
                              sprintf("schemas/%s.json", name)
                              )
                       )

@@ -51,7 +51,7 @@ server = function(input, output, session){
         ## get schemas as included in validiraptor package:
         ##        sprintf(fmt = "www/schemas/%s.json") |>
         ## get schemas from dedicated github repo:
-        sprintf(fmt = "https://raw.githubusercontent.com/eLTER-RI/validiraptor_schemas/main/schemas/%s.json") |>
+        sprintf("https://raw.githubusercontent.com/eLTER-RI/elter-ci-schemas/main/schemas/%s.json") |>
         setNames(schema_names)
 
 
