@@ -20,6 +20,5 @@
     },
     "required" : ["SITE_CODE", "STATION_CODE", "EVENT_ID", "TIME_FROM", "TIME_TO",
 		  "PHYS_SAMPLE"]
-
 }
 

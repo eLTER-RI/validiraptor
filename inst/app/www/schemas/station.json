@@ -50,7 +50,7 @@
 	    "multipleOf" : 1
 	},
 	"InstHeight" : {
-	    "description" : "Installation height [decimal number] – height of the installation of a sensor or device in [cm] measured from the soil surface. Positive and negative values are possible.",
+	    "description" : "Installation height [decimal number]: height of the installation of a sensor or device in [cm] measured from the soil surface. Positive and negative values are possible.",
 	    "type" : "number"
 	},
 	"Local_Habitat_Type" : {

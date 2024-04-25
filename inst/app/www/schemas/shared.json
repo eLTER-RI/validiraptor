@@ -85,7 +85,7 @@
 	    "type": "string"
 	},
 	"LIST_CODE": {
-	    "description": "Name or reference [URL] of the code list; if referring to an existing code list the name of the code list is provided (e.g. DB, EnvThes). If the code is defined by the user, use ‘ADD’ as identification",
+	    "description": "Name or reference [URL] of the code list; if referring to an existing code list the name of the code list is provided (e.g. DB, EnvThes). If the code is defined by the user, use \"ADD\" as identification",
 	    "type": "string"
 	},
 	"LON": {

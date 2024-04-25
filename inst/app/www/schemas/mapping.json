@@ -72,7 +72,7 @@
     },
     "required" : ["SITE_CODE", "TIME", "VARIABLE", "VALUE"],
     "$defs": {
-	"description_STATION_CODE" : "Station code [UTF-8 character encoding] – as reference to the observation location (=station) defined in the table STATION. In case of nested plots, the identification of the subplot is provided separated by a dash, e.g. IP2_01.\rCondition 1: in case the data refer to the whole area of the SITE and no STATION is identified, the field STATION_CODE is left blank.\rCondition 2: in case no permanent plots are installed to be revisited and absolute location (e.g. by GPS device) is provided (see ABS_POSITION), the field STATION_CODE is left blank."
+	"description_STATION_CODE" : "Station code [UTF-8 character encoding] as reference to the observation location (=station) defined in the table STATION. In case of nested plots, the identification of the subplot is provided separated by a dash, e.g. IP2_01.\rCondition 1: in case the data refer to the whole area of the SITE and no STATION is identified, the field STATION_CODE is left blank.\rCondition 2: in case no permanent plots are installed to be revisited and absolute location (e.g. by GPS device) is provided (see ABS_POSITION), the field STATION_CODE is left blank."
 	,
 	"description_FLAGQUA": "Quality flag for the data values based on the applied data quality control procedure as provided by the local system.\rExamples: Q = quality controlled value, LOD = below limit of detection, E = estimated from measured value\rAdditional values can be defined or quality measures according to the local procedure (e.g. % of valid values for aggregation) can be used, but need to be documented in the REFERENCE."
 	,

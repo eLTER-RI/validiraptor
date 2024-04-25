@@ -6,7 +6,7 @@
     "type" : "object",
     "properties" : {
         "VARIABLE" : {
-            "description" : "Variable [UTF-8 character encoding] – the observed phenomenon during the observation. The variable/parameter name normally is given as abbreviation\ne.g. LISTSUB VARIABLE Name\nDB ALK Alkalinity\nDB BOD Biochemical oxygen demand\nDB TC Total carbon\nIf possible, use standard encodings for the variable names (e.g. ICP Integrated Monitoring). Additional variable codes can be defined, but need to be documented in the REFERENCE.",
+            "description" : "Variable [UTF-8 character encoding] the observed phenomenon during the observation. The variable/parameter name normally is given as abbreviation\ne.g. LISTSUB VARIABLE Name\nDB ALK Alkalinity\nDB BOD Biochemical oxygen demand\nDB TC Total carbon\nIf possible, use standard encodings for the variable names (e.g. ICP Integrated Monitoring). Additional variable codes can be defined, but need to be documented in the REFERENCE.",
             "type" : "string"
         },
         "METH_DESCR" : {

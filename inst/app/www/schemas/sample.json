@@ -5,7 +5,6 @@
     "description" : "specification of eLTER sample reports",
     "type" : "object",
     "properties" : {
-
 	"SITE_CODE": {"$ref": "shared#/definitions/SITE_CODE"},
 	"STATION_CODE": {"$ref": "shared#/definitions/STATION_CODE"},
 	"EVENT_ID": {"$ref": "shared#/definitions/EVENT_ID"},
