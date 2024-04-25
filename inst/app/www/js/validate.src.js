@@ -7,7 +7,8 @@ Shiny.addCustomMessageHandler("validate", function(payload) {
 
     const schemaTopic = JSON.parse(schemas.schemaTopic)
     const schemaShared = JSON.parse(schemas.schemaShared)
-    const Ajv2020 = require("ajv/dist/2020");
+//    const Ajv2020 = require("./node_modules/ajv/dist/2020.js");
+    const Ajv2020 = require("ajv");
     const ajv = new Ajv2020({
 	schemas: [schemaTopic, schemaShared],
 	allErrors: true
