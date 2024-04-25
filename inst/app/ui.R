@@ -21,6 +21,9 @@ navbarPage(title = "Validiraptor",
 
            div(id = "shinyEffectsPlaceholder"),
 
+
+           div(id = "hugo"),
+
            img(src = "validiraptor.svg", height = "50px"),
            ## broadcast whether one of filePicker, dataPaster or schemaPicker,
            ## because server.R listes to all three in one function:
