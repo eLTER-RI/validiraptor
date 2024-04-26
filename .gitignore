@@ -1,3 +1,6 @@
+# skip logs (linting etc.)
+.log
+
 # R package dev
 
 # don't update workflow (violates push rules on eLTER-RI)
