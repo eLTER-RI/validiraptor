@@ -136,10 +136,6 @@ end general dev advice  -->
 
 ## Authors
 
-List of contributors to the project. Include [ORCID](https://orcid.org/)
-to uniquely identify contributors and the Research Organization Registry
-([ROR](https://ror.org/)) for the institution.
-
 |     Author      |                       Affiliation                       |                            ORCID                             |  e-mail   |
 |:---------------:|:-------------------------------------------------------:|:------------------------------------------------------------:|:---------:|
 | Ivo Offenthaler | [Environment Agency Austria](https://ror.org/013vyke20) | [0000-0001-5793-6641](https://orcid.org/0000-0001-5793-6641) | see ORCID |
