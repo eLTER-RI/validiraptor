@@ -16,10 +16,11 @@ schema notation.
 ## Table of Contents
 
 - [Installation and usage](#installation-and-usage)
-- [Coding style](#coding-style)
-- [Data standards](#data-standards)
-- [File naming nomenclature](#file-naming-nomenclature)
-- [Reproducibility](#reproducibility)
+- [Notes for contributors](#notes-for-contributors)
+  <!---   [Data standards](#data-standards)
+  -   [File naming nomenclature](#file-naming-nomenclature)
+  -   [Reproducibility](#reproducibility)
+  -->
 - [Contributing](#contributing)
 - [Authors](#authors)
 - [License](#license)
@@ -130,45 +131,18 @@ List of contributors to the project. Include [ORCID](https://orcid.org/)
 to uniquely identify contributors and the Research Organization Registry
 ([ROR](https://ror.org/)) for the institution.
 
-|     Author      |                                Affiliation                                |                            ORCID                             |  e-mail   |
-|:---------------:|:-------------------------------------------------------------------------:|:------------------------------------------------------------:|:---------:|
-| Ivo Offenthaler | [Umweltbundesamt (Environment Agency Austria)](https://ror.org/013vyke20) | [0000-0001-5793-6641](https://orcid.org/0000-0001-5793-6641) | see ORCID |
-
-    https://api.github.com/search/users?q=Allan+T+Souza+in%3Ausername
+|     Author      |                       Affiliation                       |                            ORCID                             |  e-mail   |
+|:---------------:|:-------------------------------------------------------:|:------------------------------------------------------------:|:---------:|
+| Ivo Offenthaler | [Environment Agency Austria](https://ror.org/013vyke20) | [0000-0001-5793-6641](https://orcid.org/0000-0001-5793-6641) | see ORCID |
 
 ## License
-
-Describe the license used in the project and include a file named
-`LICENSE` in the root of the repository:
 
 - This project is licensed under the [EUPL License](https://eupl.eu/) -
   see the [LICENSE](LICENSE) file for details.
 
-## Citation
-
-Add a file containing the citation information on the repository root
-folder. The file should be named `CITATION.cff`. More information about
-Citation File Format (cff) files can be found
-[here](https://citation-file-format.github.io/). Below there is an
-example of the contents of a generic `CITATION.cff` file:
-
-    cff-version: 1.2.0
-    message: "If you use this repository, please cite it as below."
-    title: "eLTER boilerplate readme"
-    version: 1.0.0
-    year: 2024
-    authors:
-      - family-names: "Souza"
-        given-names: "Allan T."
-        orcid: "https://orcid.org/0000-0002-1851-681X"
-        affiliation: "Institute for Atmospheric and Earth System Research (INAR), Forest Sciences, Faculty of Agriculture and Forestry, University of Helsinki, P.O. Box 27, 00014 Helsinki, Finland"
-    license: EUPL-1.2
-    url: "https://github.com/eLTER-RI/boilerplate-readme"
-
 ## Acknowledgments
 
-Add the funding acknowledgment for eLTER PPP, eLTER PLUS, and/or eLTER
-EnRich.
+Development & maintenance funded through:
 
 <p align="center">
 <a href="https://elter-ri.eu/elter-ppp">
