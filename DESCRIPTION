@@ -26,6 +26,8 @@ Imports:
     shinyEffects
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    testthat (>= 3.0.0)
 VignetteBuilder: knitr
 URL: https://elter-ri.github.io/validiraptor/
+Config/testthat/edition: 3

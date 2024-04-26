@@ -6,8 +6,6 @@ library(shinyjs)
 
 
 server = function(input, output, session){
-    ##load helper functions:
-    source("helpers.R")
 
     tags$link(rel = "stylesheet", type = "text/css", href = "local.css")
 
@@ -46,13 +44,6 @@ server = function(input, output, session){
                       "Reference" = "reference", "Event" = "event",
                       "Sample" = "sample", "License" = "license"
                       )
-
-    schema_urls <- schema_names |>
-        ## get schemas as included in validiraptor package:
-        ##        sprintf(fmt = "www/schemas/%s.json") |>
-        ## get schemas from dedicated github repo:
-        sprintf("https://raw.githubusercontent.com/eLTER-RI/elter-ci-schemas/main/schemas/%s.json") |>
-        setNames(schema_names)
 
 
     insertUI("#schemaPickerHere",

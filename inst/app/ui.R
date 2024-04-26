@@ -9,10 +9,6 @@ library(shinyEffects) ## to add pulse effect to UI elements
 
 bootstrap5 <- bslib::bs_theme(version = 5)
 
-
-
-source("helpers.R")
-
 navbarPage(title = "Validiraptor",
            position = "fixed-top",
            theme = bootstrap5,
@@ -94,7 +90,7 @@ navbarPage(title = "Validiraptor",
                                                     )
                                                   ),
                                       card_body(
-                                        dataTableOutput("instancePreview"),
+                                        DT::DTOutput("instancePreview"),
                                         )
                                       ),
                                  div(id = "errorTable",
@@ -104,7 +100,7 @@ navbarPage(title = "Validiraptor",
                                                    ),
                                        card_body(
                                          div(id = "validationDetails",
-                                             dataTableOutput("validationResult")
+                                             DT::DTOutput("validationResult")
                                              )
                                        )
                                      )

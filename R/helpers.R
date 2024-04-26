@@ -14,7 +14,7 @@ csv_to_jsonstring  <- function(dataframe) {
 
 ## render plain dataTableOutput:
 renderDataTablePlain <- \(expr) {
-  renderDataTable(expr,
+  DT::renderDT(expr,
                   options = list(paging = FALSE,
                                  searching = FALSE,
                                  info = FALSE)
