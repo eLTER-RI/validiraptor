@@ -2,3 +2,7 @@ url: https://elter-ri.github.io/validiraptor/
 template:
   bootstrap: 5
 
+home:
+  sidebar:
+    structure: [links, authors, dev]
+

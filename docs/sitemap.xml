@@ -4,9 +4,6 @@
     <loc>https://elter-ri.github.io/validiraptor/404.html</loc>
   </url>
   <url>
-    <loc>https://elter-ri.github.io/validiraptor/articles/architecture.html</loc>
-  </url>
-  <url>
     <loc>https://elter-ri.github.io/validiraptor/articles/formats.html</loc>
   </url>
   <url>
@@ -19,19 +16,31 @@
     <loc>https://elter-ri.github.io/validiraptor/articles/task-sharing.html</loc>
   </url>
   <url>
-    <loc>https://elter-ri.github.io/validiraptor/articles/what-is-a-jsonschema.html</loc>
+    <loc>https://elter-ri.github.io/validiraptor/authors.html</loc>
   </url>
   <url>
-    <loc>https://elter-ri.github.io/validiraptor/authors.html</loc>
+    <loc>https://elter-ri.github.io/validiraptor/BUG_REPORT.html</loc>
+  </url>
+  <url>
+    <loc>https://elter-ri.github.io/validiraptor/CODE_OF_CONDUCT.html</loc>
+  </url>
+  <url>
+    <loc>https://elter-ri.github.io/validiraptor/CONTRIBUTING.html</loc>
+  </url>
+  <url>
+    <loc>https://elter-ri.github.io/validiraptor/FEATURE_REQUEST.html</loc>
   </url>
   <url>
     <loc>https://elter-ri.github.io/validiraptor/index.html</loc>
   </url>
   <url>
+    <loc>https://elter-ri.github.io/validiraptor/ISSUE_TEMPLATE.html</loc>
+  </url>
+  <url>
     <loc>https://elter-ri.github.io/validiraptor/LICENSE-text.html</loc>
   </url>
   <url>
-    <loc>https://elter-ri.github.io/validiraptor/LICENSE.html</loc>
+    <loc>https://elter-ri.github.io/validiraptor/PULL_REQUEST_TEMPLATE.html</loc>
   </url>
   <url>
     <loc>https://elter-ri.github.io/validiraptor/reference/index.html</loc>

@@ -1,5 +1,7 @@
 
-<img src='man/figures/validiraptor.svg' width = '150px' align='left' style = 'display:block' />
+<img src='man/figures/validiraptor.svg' width = '150px' style = 'display:block; margin-top:5em; clear:both !important' />
+
+<br/>
 
 # Validiraptor
 
@@ -16,7 +18,6 @@ schema notation.
 ## Table of Contents
 
 - [Installation and usage](#installation-and-usage)
-- [Notes for contributors](#notes-for-contributors)
   <!---   [Data standards](#data-standards)
   -   [File naming nomenclature](#file-naming-nomenclature)
   -   [Reproducibility](#reproducibility)
@@ -47,7 +48,28 @@ to install from the GitHub source:
 > install the Rtools compatible with your R version (e. g. `RTools4.3`
 > for R version 4.3).
 
-## Notes for contributors
+After installation of the package, execute `validiraptor::run_app()` to
+launch the web app.
+
+### Getting help
+
+#### For users
+
+In the running app (hosted or launched locally with
+`validiraptor::run_app()`), switch to the “demo” tab in the left sidebar
+for a choice of sample data to validate.
+
+#### For users and developers
+
+Visit <https://elter-ri.github.io/validiraptor/> or execute
+`validiraptor::run_site()` to browse the documentation
+
+#### For developers
+
+Consult inline comments for internal functions which are not exported
+for use with `help()`
+
+## Contributing
 
 ### Dependencies
 
@@ -151,10 +173,10 @@ Development & maintenance funded through:
 
 <p align="center">
 <a href="https://elter-ri.eu/elter-ppp">
-<img src="assets/eLTER-IMAGE-PPP_logo-v01.svg" alt="eLTER PLUS Logo" width="175" height="auto"/>
+<img src="man/figures/eLTER-IMAGE-PPP_logo-v01.svg" alt="eLTER PLUS Logo" width="175" height="auto"/>
 </a> <a href="https://elter-ri.eu/elter-plus">
-<img src="assets/eLTER-IMAGE-PLUS_logo-v01.svg" width="175" height="auto"/>
+<img src="man/figures/eLTER-IMAGE-PLUS_logo-v01.svg" width="175" height="auto"/>
 </a> <a href="https://elter-ri.eu/elter-enrich">
-<img src="assets/eLTER-IMAGE-EnRich_logo-v01.svg" alt="eLTER EnRich Logo" width="175" height="auto"/>
+<img src="man/figures/eLTER-IMAGE-EnRich_logo-v01.svg" alt="eLTER EnRich Logo" width="175" height="auto"/>
 </a>
 </p>

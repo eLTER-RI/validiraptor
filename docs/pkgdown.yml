@@ -1,11 +1,11 @@
-pandoc: 2.11.3.1
-pkgdown: 2.0.6
+pandoc: 3.1.13
+pkgdown: 2.0.8
 pkgdown_sha: ~
 articles:
   formats: formats.html
   schema-management: schema-management.html
   task-sharing: task-sharing.html
-last_built: 2024-03-22T09:33Z
+last_built: 2024-04-26T11:24Z
 urls:
   reference: https://elter-ri.github.io/validiraptor/reference
   article: https://elter-ri.github.io/validiraptor/articles
