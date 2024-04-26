@@ -1,5 +1,5 @@
 
-<img src='man/figures/validiraptor.png' width = '150px' align='left' style = 'display:block' />
+<img src='man/figures/validiraptor.svg' width = '150px' align='left' style = 'display:block' />
 
 # Validiraptor
 
@@ -15,8 +15,6 @@ schema notation.
 
 ## Table of Contents
 
-Add a table of contents at the beginning of the `README.md` file.
-
 - [Installation and usage](#installation-and-usage)
 - [Coding style](#coding-style)
 - [Data standards](#data-standards)
@@ -30,101 +28,101 @@ Add a table of contents at the beginning of the `README.md` file.
 
 ## Installation and usage
 
-Instructions on how to use the software, including links to any required
-software and dependencies, and any necessary commands or scripts.
-Provide examples:
+### Installation from GitHub
 
-- On R, install the package `tidyverse`.
+This **R** package ist available from GitHub only. Use {remotes} or
+{pacman} to install from GitHub:
 
-<!-- -->
+      ## install {remotes} if necessary:
+      if(!require("remotes")) install.packages("remotes")
+      ## fetch and install {validiraptor}:
+      remotes::install_github("eLTER-RI/validiraptor")
 
-    install.packages(tidyverse)
+## Notes for contributors
 
-## Coding style
+### Dependencies
+
+- Dependencies on other R packages are declared in `DESCRIPTION` and
+  resolved upon installation.
+- Javascript dependencies are declared and included in `inst\app\www\js`
+
+*To modify the javascript part of the validation functionality, change
+the source `validate.src.js` first, then
+[`browserify`](https://www.npmjs.com/package/browserify) the source to
+get the bundled `validate.js`*
+
+### Coding standards
 
 To maintain the quality and readability of our code, we follow certain
 coding standards. Contributors are expected to adhere to these
 guidelines when writing code for this project:
 
-### R
+#### Style
 
 - Our R code adheres to the [tidyverse style
   guide](https://style.tidyverse.org/). Key points include:
-  - Name variables and functions in `snake_case`
+  - Name variables and functions in `snake_case` (except `camelCase` for
+    IDs of Shiny UI elements)
   - Place spaces around all binary operators (=, +, -, \<-, etc.),
     except in function arguments.
-  - Always use `<-`, not `=`, for assignment.
+  - Always assign `<-`, not `=`
 
-### Python
+#### Approach
 
-- We follow the [PEP 8 style
-  guide](https://www.python.org/dev/peps/pep-0008/) for Python code.
-  This includes guidelines on code layout, naming conventions, and best
-  practices.
-- Use 4 spaces per indentation level.
+- Those coming from an object oriented language (like Python), please
+  observe R’s [functional approach](https://adv-r.hadley.nz/fp.html)
+  together with the native pipe operator `|>` to prevent scope mess.
 
-### Tools for enforcing style
-
-- For Python, consider using tools like
-  [`flake8`](https://github.com/PyCQA/flake8) or
-  [`black`](https://github.com/psf/black) to automatically check and
-  format code.
-- For R, you can use the [`lintr`](https://lintr.r-lib.org/) package or
-  RStudio’s built-in code formatting capabilities.
-
-## Data standards
-
-This project adheres to eLTER data standards. Please ensure all data
-complies with these standards and is deposited appropriately in
+<!-- general advice for contributors, include in README ?
+&#10;### Tools for enforcing style
+&#10;-   R packages to support styling (and other code checks) are
+    [`lintr`](https://lintr.r-lib.org/) or
+    [`styler`](https://styler.r-lib.org/). RStudio and other
+    popular code editors also offer R-specific linting modes/plugins.
+&#10;## Data standards
+&#10;This project adheres to eLTER data standards. Please ensure all data
+complies with these standards (*e. g. by using this package*)
+    and is deposited appropriately in
 [Zenodo](https://zenodo.org/communities/elter) or
 [B2SHARE](https://b2share.eudat.eu/communities/LTER) repositories as per
 eLTER community guidelines.
-
-## File naming nomenclature
-
-To ensure clarity and ease of access for all contributors, please adhere
+&#10;
+&#10;## File naming nomenclature
+&#10;To ensure clarity and ease of access for all contributors, please adhere
 to the following file naming conventions:
-
-- Use descriptive names that reflect the content or purpose of the file.
-- Use hyphens (-) to separate different elements of the file name, and
-  underscores (\_) to denote spaces within an element.
-- Keep file names concise, avoiding unnecessary abbreviations while
-  maintaining sufficient detail.
-- Include the project identifier (i.e. `eLTER`) name at the beginning of
-  the files when possible.
-- Include a version number at the end of the file name such as v01.
-  Change this version number each time the file is saved.
-- Include an identifier of what the file is on the file name.
-- Examples:
-  - `eLTER-CODE-data_loading-v01.R`
-  - `eLTER-DATA-temperature_sensor_data-v01.csv`
-
+&#10;-   Use descriptive names that reflect the content or purpose of the
+    file.
+-   Use underscores (\_) to separate different elements of R source file names
+    (`awesome_function.R`) as well as to denote spaces within
+    an element (`my_important_dataframe`)
+-   Keep file names concise, avoiding unnecessary abbreviations while
+    maintaining sufficient detail. 
+    [Here's how to name R source files](https://r-pkgs.org/code.html#sec-code-organising)
+&#10;
 ## Reproducibility
-
-Ensure the reproducibility of your work by:
-
-- Providing detailed descriptions of methods and protocols in the
-  documentation.
-- Including version-controlled source code for all scripts and analysis
-  workflows.
-- Specifying versions and sources of external libraries and tools used.
-- Sharing raw data and processed results in accessible, referenced data
-  repositories with clear metadata.
-- Documenting any deviations from the expected protocols.
-
-## Contributing
-
-The repository should have clear instructions on how to contribute to
+&#10;Ensure the reproducibility of your work by:
+&#10;-   Providing detailed descriptions of methods and protocols in the
+    documentation.
+-   Including version-controlled source code for all scripts and
+    analysis workflows.
+-   Specifying versions and sources of external libraries and tools
+    used.
+-   Sharing raw data and processed results in accessible, referenced
+    data repositories with clear metadata.
+-   Documenting any deviations from the expected protocols.
+&#10;## Contributing
+&#10;The repository should have clear instructions on how to contribute to
 the project. This should include different files with clear
 instructions. To do so, add a folder named `.github` on the project
 root. In this folder you should add the following files:
-
-- `CONTRIBUTING.md`
-- `CODE_OF_CONDUCT.md`
-- `PULL_REQUEST_TEMPLATE.md`
-- `ISSUE_TEMPLATE.md`
-- `BUG_REPORT.md`
-- `FEATURE_REQUEST.md`
+&#10;-   `CONTRIBUTING.md`
+-   `CODE_OF_CONDUCT.md`
+-   `PULL_REQUEST_TEMPLATE.md`
+-   `ISSUE_TEMPLATE.md`
+-   `BUG_REPORT.md`
+-   `FEATURE_REQUEST.md`
+&#10;
+end general dev advice  -->
 
 ## Authors
 
@@ -132,24 +130,9 @@ List of contributors to the project. Include [ORCID](https://orcid.org/)
 to uniquely identify contributors and the Research Organization Registry
 ([ROR](https://ror.org/)) for the institution.
 
-|     Author     |                     Affiliation                     |                            ORCID                             |          e-mail           |
-|:--------------:|:---------------------------------------------------:|:------------------------------------------------------------:|:-------------------------:|
-| Allan T. Souza | [University of Helsinki](https://ror.org/040af2s02) | [0000-0002-1851-681X](https://orcid.org/0000-0002-1851-681X) | <allan.souza@helsinki.fi> |
-
-Optionally, you can also add the authors faces with the link to their
-GitHub accounts. To do so, you can add the a code like the one below on
-the `README.md` file:
-
-    [//]: contributor-faces
-
-    <a href="https://github.com/allantsouza"><img src="https://avatars.githubusercontent.com/u/51362002?v=4" title="Allan T. Souza" width="70" height="70"></a>
-
-    [//]: contributor-faces
-
-<a href="https://github.com/allantsouza"><img src="https://avatars.githubusercontent.com/u/51362002?v=4" title="Allan T. Souza" width="70" height="70"/></a>
-
-To find the URL of your the avatar, you can query using the GitHub API,
-like in this example:
+|     Author      |                                Affiliation                                |                            ORCID                             |  e-mail   |
+|:---------------:|:-------------------------------------------------------------------------:|:------------------------------------------------------------:|:---------:|
+| Ivo Offenthaler | [Umweltbundesamt (Environment Agency Austria)](https://ror.org/013vyke20) | [0000-0001-5793-6641](https://orcid.org/0000-0001-5793-6641) | see ORCID |
 
     https://api.github.com/search/users?q=Allan+T+Souza+in%3Ausername
 
