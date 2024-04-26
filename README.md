@@ -82,6 +82,9 @@ the source `validate.src.js` first, then
 [`browserify`](https://www.npmjs.com/package/browserify) the source to
 get the bundled `validate.js`*
 
+- R code is tested with [{testthat}](https://testthat.r-lib.org/). The
+  test scripts go into `tests/testthat/`.
+
 ### Coding standards
 
 To maintain the quality and readability of our code, we follow certain

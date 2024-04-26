@@ -90,6 +90,8 @@ Consult inline comments for internal functions which are not
     then [`browserify`](https://www.npmjs.com/package/browserify)
     the source to get the bundled `validate.js`*
 
+- R code is tested with [{testthat}](https://testthat.r-lib.org/). The test scripts go into `tests/testthat/`.
+
 
 
 
