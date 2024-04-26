@@ -31,13 +31,21 @@ schema notation.
 
 ### Installation from GitHub
 
-This **R** package ist available from GitHub only. Use {remotes} or
-{pacman} to install from GitHub:
+This **R** package ist available from GitHub only. Use
+[{remotes}](https://cran.r-project.org/web/packages/remotes/index.html)
+or [{pacman}](https://cran.r-project.org/web/packages/pacman/index.html)
+to install from the GitHub source:
 
       ## install {remotes} if necessary:
       if(!require("remotes")) install.packages("remotes")
       ## fetch and install {validiraptor}:
       remotes::install_github("eLTER-RI/validiraptor")
+
+> On Windows, you need to download and install
+> [Rtools](https://cran.r-project.org/bin/windows/Rtools/rtools43/rtools.html)
+> to compile the source files retrieved from GitHub. Make sure to
+> install the Rtools compatible with your R version (e. g. `RTools4.3`
+> for R version 4.3).
 
 ## Notes for contributors
 
@@ -68,11 +76,12 @@ guidelines when writing code for this project:
     except in function arguments.
   - Always assign `<-`, not `=`
 
-#### Approach
+#### Paradigm
 
-- Those coming from an object oriented language (like Python), please
-  observe R’s [functional approach](https://adv-r.hadley.nz/fp.html)
-  together with the native pipe operator `|>` to prevent scope mess.
+- Please stick to R’s [functional
+  approach](https://adv-r.hadley.nz/fp.html) and make liberal use of the
+  native pipe operator `|>` to prevent scope mess and increase
+  readability.
 
 <!-- general advice for contributors, include in README ?
 &#10;### Tools for enforcing style

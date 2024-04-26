@@ -657,11 +657,19 @@ remote in JSON schema notation.</p>
 <h2 id="installation-and-usage">Installation and usage</h2>
 <h3 id="installation-from-github">Installation from GitHub</h3>
 <p>This <strong>R</strong> package ist available from GitHub only. Use
-{remotes} or {pacman} to install from GitHub:</p>
+<a href="https://cran.r-project.org/web/packages/remotes/index.html">{remotes}</a>
+or <a href="https://cran.r-project.org/web/packages/pacman/index.html">{pacman}</a>
+to install from the GitHub source:</p>
 <pre><code>  ## install {remotes} if necessary:
   if(!require(&quot;remotes&quot;)) install.packages(&quot;remotes&quot;)
   ## fetch and install {validiraptor}:
   remotes::install_github(&quot;eLTER-RI/validiraptor&quot;)</code></pre>
+<blockquote>
+<p>On Windows, you need to download and install <a href="https://cran.r-project.org/bin/windows/Rtools/rtools43/rtools.html">Rtools</a>
+to compile the source files retrieved from GitHub. Make sure to install
+the Rtools compatible with your R version (e. g. <code>RTools4.3</code>
+for R version 4.3).</p>
+</blockquote>
 <h2 id="notes-for-contributors">Notes for contributors</h2>
 <h3 id="dependencies">Dependencies</h3>
 <ul>
@@ -689,12 +697,11 @@ except in function arguments.</li>
 <li>Always assign <code>&lt;-</code>, not <code>=</code></li>
 </ul></li>
 </ul>
-<h4 id="approach">Approach</h4>
+<h4 id="paradigm">Paradigm</h4>
 <ul>
-<li>Those coming from an object oriented language (like Python), please
-observe R’s <a href="https://adv-r.hadley.nz/fp.html">functional
-approach</a> together with the native pipe operator <code>|&gt;</code>
-to prevent scope mess.</li>
+<li>Please stick to R’s <a href="https://adv-r.hadley.nz/fp.html">functional approach</a> and make
+liberal use of the native pipe operator <code>|&gt;</code> to prevent
+scope mess and increase readability.</li>
 </ul>
 <!-- general advice for contributors, include in README ?
 &#10;### Tools for enforcing style
