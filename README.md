@@ -75,7 +75,7 @@ for use with `help()`
 
 - Dependencies on other R packages are declared in `DESCRIPTION` and
   resolved upon installation.
-- Javascript dependencies are declared and included in `inst\app\www\js`
+- Javascript dependencies are declared and included in `inst/app/www/js`
 
 *To modify the javascript part of the validation functionality, change
 the source `validate.src.js` first, then

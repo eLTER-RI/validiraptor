@@ -41,8 +41,8 @@ knitr::opts_chunk$set(
 
 ### Installation from GitHub
 This **R** package ist available from GitHub only. Use
-    [{remotes}](https://cran.r-project.org/web/packages/remotes/index.html) or
-    [{pacman}](https://cran.r-project.org/web/packages/pacman/index.html)
+    {[remotes](https://cran.r-project.org/web/packages/remotes/index.html)} or
+    {[pacman](https://cran.r-project.org/web/packages/pacman/index.html)}
     to install from the GitHub source:
 
 ```
@@ -82,7 +82,7 @@ Consult inline comments for internal functions which are not
 - Dependencies on other R packages are declared in `DESCRIPTION` and resolved
  upon installation.
 - Javascript dependencies are declared and included in
- `inst\app\www\js`
+ `inst/app/www/js`
 
 
 *To modify the javascript part of the validation functionality,
@@ -90,7 +90,7 @@ Consult inline comments for internal functions which are not
     then [`browserify`](https://www.npmjs.com/package/browserify)
     the source to get the bundled `validate.js`*
 
-- R code is tested with [{testthat}](https://testthat.r-lib.org/). The test scripts go into `tests/testthat/`.
+- R code is tested with {[testthat](https://testthat.r-lib.org/)}. The test scripts go into `tests/testthat/`.
 
 
 
