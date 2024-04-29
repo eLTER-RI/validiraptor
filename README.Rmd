@@ -188,7 +188,7 @@ end general dev advice  -->
 
 | Author | Affiliation | ORCID | e-mail |
 | :---: | :---: | :---: | :---: |
-|Ivo Offenthaler|[Environment Agency Austria](https://ror.org/013vyke20)|[0000-0001-5793-6641](https://orcid.org/0000-0001-5793-6641)|see ORCID
+|Ivo Offenthaler|[Environment Agency Austria](https://ror.org/013vyke20)|[0000-0001-5793-6641](https://orcid.org/0000-0001-5793-6641)|validiraptor@proton.me
 
 
 ## License
