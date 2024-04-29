@@ -1,5 +1,5 @@
 
-<img src='man/figures/validiraptor.svg' width = '150px' style = 'display:block; margin-top:5em; clear:both !important' />
+<img src='man/figures/eLTER-IMAGE-validiraptor.svg' width = '150px' style = 'display:block; margin-top:5em; clear:both !important' />
 
 <br/>
 
