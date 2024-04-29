@@ -24,6 +24,7 @@ Imports:
     shinyjs,
     shinyWidgets,
     shinyEffects
+Depends: R (>= 4.1)
 Suggests: 
     knitr,
     rmarkdown,
