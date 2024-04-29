@@ -33,8 +33,8 @@ schema notation.
 ### Installation from GitHub
 
 This **R** package ist available from GitHub only. Use
-[{remotes}](https://cran.r-project.org/web/packages/remotes/index.html)
-or [{pacman}](https://cran.r-project.org/web/packages/pacman/index.html)
+{[remotes](https://cran.r-project.org/web/packages/remotes/index.html)}
+or {[pacman](https://cran.r-project.org/web/packages/pacman/index.html)}
 to install from the GitHub source:
 
       ## install {remotes} if necessary:
@@ -82,7 +82,7 @@ the source `validate.src.js` first, then
 [`browserify`](https://www.npmjs.com/package/browserify) the source to
 get the bundled `validate.js`*
 
-- R code is tested with [{testthat}](https://testthat.r-lib.org/). The
+- R code is tested with {[testthat](https://testthat.r-lib.org/)}. The
   test scripts go into `tests/testthat/`.
 
 ### Coding standards
@@ -161,9 +161,9 @@ end general dev advice  -->
 
 ## Authors
 
-|     Author      |                       Affiliation                       |                            ORCID                             |  e-mail   |
-|:---------------:|:-------------------------------------------------------:|:------------------------------------------------------------:|:---------:|
-| Ivo Offenthaler | [Environment Agency Austria](https://ror.org/013vyke20) | [0000-0001-5793-6641](https://orcid.org/0000-0001-5793-6641) | see ORCID |
+|     Author      |                       Affiliation                       |                            ORCID                             |            e-mail            |
+|:---------------:|:-------------------------------------------------------:|:------------------------------------------------------------:|:----------------------------:|
+| Ivo Offenthaler | [Environment Agency Austria](https://ror.org/013vyke20) | [0000-0001-5793-6641](https://orcid.org/0000-0001-5793-6641) | <validiraptor-dev@proton.me> |
 
 ## License
 
