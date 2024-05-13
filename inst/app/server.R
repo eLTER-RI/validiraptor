@@ -3,9 +3,27 @@ library(jsonlite)
 library(listviewer)
 library(shinyWidgets)
 library(shinyjs)
+library(cicerone)
+
+
+
 
 
 server = function(input, output, session){
+
+
+    guide <- Cicerone$
+        new()$
+        step(
+            "instanceInput", "Input utilities",
+            description = "First: provide an example (\"instance\") of your CSV
+ data here. You can upload or paste own data or select one of the demo files.")$
+ step("schemaPickerHere", "Select schema", "Second: select the schema (ruleset) 
+your CSV  data should comply with.")$
+    step("ciceronePlaceholderResultPanel", "Results", "Once you have provided
+ CSV data and picked a schema, the validation results will show here.")
+
+  guide$init()$start()
 
     tags$link(rel = "stylesheet", type = "text/css", href = "local.css")
 
@@ -228,6 +246,12 @@ server = function(input, output, session){
     output$schemaView <- renderJsonedit(schemas() |>
                                         Map(f = \(s) fromJSON(s)) |> jsonedit()
                                         )
+
+
+
+
+
+
 
     pushbar::setup_pushbar()
 

@@ -5,19 +5,19 @@ library(pushbar)
 library(shinyjs)
 library(markdown)
 library(shinyEffects) ## to add pulse effect to UI elements
-
+library(cicerone)
 
 bootstrap5 <- bslib::bs_theme(version = 5)
+
+
 
 navbarPage(title = "Validiraptor",
            position = "fixed-top",
            theme = bootstrap5,
            useShinyjs(),
+           use_cicerone(), ## for step-by-step guide
            pushbar::pushbar_deps(), ## to create drawer (slide-in)
-
            div(id = "shinyEffectsPlaceholder"),
-
-
            img(src = "eLTER-IMAGE-validiraptor.svg", height = "50px"),
            ## broadcast whether one of filePicker, dataPaster or schemaPicker,
            ## because server.R listes to all three in one function:
@@ -43,7 +43,7 @@ navbarPage(title = "Validiraptor",
 
                     fluidRow(
                       column(2, class = "well",
-                             tabsetPanel(
+                             tabsetPanel(id = "instanceInput",
                                tabPanel("upload",
                                         fileInputArea("filePicker",
                                                       label = "Drag & drop, or click for file picker.",
@@ -63,7 +63,7 @@ navbarPage(title = "Validiraptor",
                                         )
                              )
                              ),
-                      column(8,
+                      column(8, id = "ciceronePlaceholderResultPanel",
                              div(id = "alertNoInstance", class = "alert alert-warning",
                                  "please provide an instance first (upload or paste data)"
                                  ),
@@ -77,7 +77,8 @@ navbarPage(title = "Validiraptor",
                                  class = "alert alert-warning",
                                  "after providing an instance, please select a schema (or change the current one)"
                                  ),
-                             div(id = "resultPanel",
+                             div(
+                                 id = "resultPanel",
                                  card(card_header(id = "resultHeader",
                                                   class = "bg-light",
                                                   p("Judging from the first row, this data is ",
@@ -129,8 +130,8 @@ jsoneditOutput("schemaView")
 )
 )
 ),
-tabPanel(id = "tabAbout", title = "about", includeMarkdown("www/about.md")),
-tabPanel(id = "tabHelp", title = "help", includeMarkdown("www/help.md"))
+tabPanel(id = "tabHelp", title = "help", includeMarkdown("www/help.md")),
+tabPanel(id = "tabAbout", title = "about", includeMarkdown("www/about.md"))
 )
 
 
