@@ -159,6 +159,44 @@ root. In this folder you should add the following files:
 &#10;
 end general dev advice  -->
 
+## Features / process
+
+### 0
+
+<figure>
+<img src="assets/screenshot-walkthrough.png" />
+<figcaption>
+After launch, the user is briefly walked through the interaction
+options.
+</figcaption>
+</figure>
+
+### 1
+
+<img src="assets/screenshot-upload.png" />
+<figcaption>
+The user has to provide (upload / paste / pick demo data) CSV data for
+validation.
+</figcaption>
+</figure>
+
+### 2
+
+<img src="assets/screenshot-schema-picker.png" />
+<figcaption>
+Next, a ruleset (schema) has to be selected.
+</figcaption>
+</figure>
+
+### 3
+
+<img src="assets/screenshot-invalid-data.png" />
+<figcaption>
+After specification of CSV data and validation rules, the validation
+results are displayed in the main panel.
+</figcaption>
+</figure>
+
 ## Authors
 
 |     Author      |                       Affiliation                       |                            ORCID                             |            e-mail            |
