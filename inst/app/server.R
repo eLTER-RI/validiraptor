@@ -11,7 +11,6 @@ library(cicerone)
 
 server = function(input, output, session){
 
-
     guide <- Cicerone$
         new()$
         step(

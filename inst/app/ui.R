@@ -7,6 +7,9 @@ library(markdown)
 library(shinyEffects) ## to add pulse effect to UI elements
 library(cicerone)
 
+
+source("www/helpers.R")
+
 bootstrap5 <- bslib::bs_theme(version = 5)
 
 
