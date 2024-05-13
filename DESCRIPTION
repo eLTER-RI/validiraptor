@@ -23,7 +23,8 @@ Imports:
     shiny,
     shinyjs,
     shinyWidgets,
-    shinyEffects
+    shinyEffects,
+    cicerone
 Depends: R (>= 4.1)
 Suggests: 
     knitr,
